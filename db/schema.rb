@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717193438) do
+ActiveRecord::Schema.define(version: 20170717212520) do
 
   create_table "scores", force: :cascade do |t|
     t.integer "score"
     t.integer "distance"
-    t.integer "date"
+    t.string "date", limit: 8
     t.integer "user_id"
     t.index ["user_id"], name: "index_scores_on_user_id"
   end
