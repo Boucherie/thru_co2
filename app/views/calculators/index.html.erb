@@ -18,6 +18,7 @@
         height: 100%;
         margin: 10%;
         padding: 0;
+        background-color: #cfcfcf;
       }
       .controls {
         margin-top: 10px;
@@ -59,6 +60,19 @@
         font-size: 13px;
         font-weight: 300;
       }
+      .dis{
+        color: #532207;
+        float: right;
+        font-family: Roboto;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      #distance{
+        font-family: Roboto;
+        font-size: 17px;
+        font-weight: 600;
+        color: #135c8a;
+      }
 
     </style>
   </head>
@@ -82,8 +96,13 @@
     </div>
 
     <div id="map"></div>
+    <br>
+    <div class="dis">
+      Distance: <span id="distance"></span>
+    </div>
 
     <script>
+
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
@@ -173,7 +192,12 @@
         }, function(response, status) {
           if (status === 'OK') {
             me.directionsDisplay.setDirections(response);
-            console.log(response);
+            console.log(response.routes);
+            var distance = response.routes[0].legs[0].distance.text;
+
+              var elementdis =document.querySelector('#distance');
+              elementdis.innerHTML = distance;
+
           } else {
             window.alert('Directions request failed due to ' + status);
           }
@@ -181,5 +205,5 @@
       };
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=GM_KEY&libraries=places&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmFYgvCKS7H24sAGLJl1YwHwKugqWkGgQ&libraries=places&callback=initMap"
         async defer></script>
