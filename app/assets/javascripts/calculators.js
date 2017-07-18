@@ -1,7 +1,6 @@
 console.log('in calculators.js');
 
 
-
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     mapTypeControl: false,
@@ -87,7 +86,12 @@ AutocompleteDirectionsHandler.prototype.route = function() {
   }, function(response, status) {
     if (status === 'OK') {
       me.directionsDisplay.setDirections(response);
-      console.log(response);
+      console.log(response.routes);
+      var distance = response.routes[0].legs[0].distance.text;
+
+        var elementdis =document.querySelector('#distance');
+        elementdis.innerHTML = distance;
+
     } else {
       window.alert('Directions request failed due to ' + status);
     }
