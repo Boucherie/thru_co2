@@ -3,4 +3,6 @@ class User < ApplicationRecord
 
   belongs_to :team
   has_many :scores
+
+  validates :email, presence: true, uniqueness: true
 end
