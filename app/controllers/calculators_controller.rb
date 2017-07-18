@@ -5,8 +5,8 @@ class CalculatorsController < ApplicationController
       body = JSON.parse(res.body)
 
       render json: {
-        geocoded_waypoints: body["geocoded_waypoints"],
-        routes: body["routes"],
+        origin: body["routes"][0]['legs'][0]['start_address'],
+        destination: body["routes"][0]['legs'][0]['end_address']
       }
   end
 end
