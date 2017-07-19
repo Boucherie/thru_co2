@@ -34,6 +34,7 @@ function AutocompleteDirectionsHandler(map) {
   this.setupClickListener('changemode-walking', 'WALKING');
   this.setupClickListener('changemode-transit', 'TRANSIT');
   this.setupClickListener('changemode-driving', 'DRIVING');
+  this.setupClickListener('changemode-driving', 'CYCLING');
 
   this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
   this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
@@ -91,6 +92,8 @@ AutocompleteDirectionsHandler.prototype.route = function() {
 
         var elementdis =document.querySelector('#distance');
         elementdis.innerHTML = distance;
+      var distanceInput = response.routes[0].legs[0].distance.value;
+      console.log(distanceInput);
 
     } else {
       window.alert('Directions request failed due to ' + status);
