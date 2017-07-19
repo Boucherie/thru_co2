@@ -11,6 +11,7 @@ distanceInput = 5010
 // Transit Type - wrap in a function
 // emissions variables in kgCO2e per km
 function getEmissions(){
+  distanceInput = 5010
   var emissionsGasCar = 0.23606;
   var emissionsHeavyRail = 0.04885;
   var emissionsLRT = 0.05363;
@@ -18,11 +19,13 @@ function getEmissions(){
   var emissionsSubway = 0.05789
   var emissionsFerry = 0.11606
     function calculateEmissions(distance, transit) {
-      distance = distanceInput;
-      transit = emissionsGasCar;
-      return emissions = distance * transit;
-    }
-}
+      emissions = distance * transit;
+      console.log(emissions);
+    }; //this function works when called
+  return calculateEmissions(distanceInput, emissionsGasCar);
+};//use this for switch
+
+getEmissions();
 
 // Vehicle Type - wrap in a function
 // car emissions rates from US values
