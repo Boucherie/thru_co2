@@ -47,3 +47,18 @@ html, body {
   font-size: 13px;
   font-weight: 300;
 }
+
+.dis {
+  color: #532207;
+  float: right;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#distance {
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 600;
+  color: #135c8a;
+}
