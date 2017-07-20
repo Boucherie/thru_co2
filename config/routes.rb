@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :calculators
 
+  resources :teams
+
   # resource :users, only: %i(new create)
   post 'users' => 'users#create'
   get 'users/new' => 'users#new'

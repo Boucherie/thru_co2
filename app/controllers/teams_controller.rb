@@ -1,0 +1,17 @@
+class TeamsController < ApplicationController
+  def index
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def show
+  end
+
+  def teams_params
+
+  end
+end
