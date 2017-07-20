@@ -1,1 +1,18 @@
-Root
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Thru CO2</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="javascripts/main.js"></script>
+  </head>
+  <body>
+    <!-- <img src="/assets/google-maps.jpg" alt="test"> -->
+    <h1 class="hello">Welcome To Thru CO2</h1>
+    <div class = "button">
+      <input type="button" id="signin" value="Sign In" onclick="window.location = '<%= users_new_path %>';">
+      <input type="button" id="login" value="Log In" onclick="window.location = '<%= sessions_new_path %>';">
+      <input type="button" id="guestuser" value="Guest User" onclick="window.location = '<%= calculators_path %>';">
+    </div>
+  </body>
+</html>
