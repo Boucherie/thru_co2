@@ -1,0 +1,35 @@
+* {
+    font-family: Roboto;
+}
+
+body {
+  background :
+  url('/assets/google-maps.jpg') no-repeat;
+  background-position: top center;
+  background-size: auto;
+  margin: auto;
+  width: 100%;
+}
+
+.hello {
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center;
+    color: #cb1608;
+    opacity: 1;
+}
+
+input#signin,
+input#login,
+input#guestuser {
+  float: right;
+  font-weight: 700;
+  font-size: 12px;
+  color: darkblue;
+  margin: 3.5px;
+  padding: 4px;
+  border-radius: 8px;
+  border-color: darkblue;
+  /*text-decoration: underline;*/
+  /*border: none;*/
+}
