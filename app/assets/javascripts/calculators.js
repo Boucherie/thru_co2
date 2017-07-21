@@ -19,9 +19,9 @@ function getTransitOptions(distanceInput){
 };
 
 function getDrivingOptions(distanceInput){
-  var d = document.getElementById("transit-options");
-  var transitOptions = d.options[d.selectedIndex].value;
-  var transit = parseFloat(DrivingOptions);
+  var d = document.getElementById("vehicle-options");
+  var drivingOptions = d.options[d.selectedIndex].value;
+  var transit = parseFloat(drivingOptions);
   console.log(transit);
   calculateEmissions(distanceInput, transit);
 };
@@ -38,42 +38,7 @@ function getWalkingOptions(distanceInput){
   calculateEmissions(distanceInput, transit);
 };
 
-// choosing an option
-function clickWalkButton(distanceInput){
-var chooseWalk = document.querySelector('#pick-walking')
-chooseWalk.addEventListener('click', function(distanceInput) {
-    e.preventDefault();
-    getWalkingOptions(distanceInput);
-  });
-};
 
-function clickBicyclingButton(distanceInput){
-var chooseBike = document.querySelector('#pick-bicycling')
-chooseBike.addEventListener('click', function(distanceInput) {
-    e.preventDefault();
-    getBicyclingOptions(distanceInput);
-  });
-};
-
-function clickTransitButton(distanceInput){
-var chooseTransit = document.querySelector('#pick-transit')
-chooseTransit.addEventListener('click', function(distanceInput) {
-    e.preventDefault();
-    getTransitOptions(distanceInput);
-  });
-};
-
-function clickDrivingButton(distanceInput){
-var chooseDriving = document.querySelector('#pick-driving')
-chooseDriving.addEventListener('click', function(distanceInput) {
-    e.preventDefault();
-    getDrivingOptions(distanceInput);
-  });
-};
-
-//   else if travelType === 'DRIVING';
-//     var d = document.getElementById("vehicle-options");
-//     d.style.display = "inline-block";
 
 // SCORES: [(bike emissions / actual emissions)- 1] * 100
 
@@ -178,21 +143,28 @@ AutocompleteDirectionsHandler.prototype.route = function() {
 
       console.log(distanceInput);
 
-      // function checkMode(travelType){
-      //   travelType = response.travelMode
-      //   if travelType === 'WALKING';
-      //     console.log("hey, good job!");
-      //   elsif travelType === 'TRANSIT';
-      //     var t = document.getElementById("transit-options");
-      //     t.style.display = "inline-block";
-      //     getTransitOptions(distanceInput);
-      //   else if travelType === 'DRIVING';
-      //     var d = document.getElementById("vehicle-options");
-      //     d.style.display = "inline-block";
-      //     getDrivingOptions(distanceInput);
-      // };
-    // this gets final input calculation again
 
+      function checkMode(travelType){
+        console.log(me);
+        console.log(me.travelMode);
+
+        travelType = me.travelMode;
+
+          if (travelType === 'WALKING'){
+            console.log("hey, good job!");
+          }else if (travelType === 'BICYCLING')
+            console.log("hey, good job!");
+          else if (travelType === 'TRANSIT'){
+            var t = document.getElementById("transit-options");
+            t.style.display = "inline-block";
+            getTransitOptions(distanceInput);
+          }else if (travelType === 'DRIVING'){
+            var d = document.getElementById("vehicle-options");
+            d.style.display = "inline-block";
+            getDrivingOptions(distanceInput);
+      };
+    };
+      checkMode();
 
     } else {
       window.alert('Directions request failed due to ' + status);
