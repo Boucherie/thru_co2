@@ -11,19 +11,25 @@ function calculateEmissions(distanceInput, transit) {
 
 
 function getTransitOptions(distanceInput){
-  var t = document.getElementById("transit-options");
-  var transitOptions = t.options[t.selectedIndex].value;
+  var t = document.getElementById("transit-types");
+  t.style.display = "inline-block";
+  var transitMenu = document.getElementById("transit-options");
+  var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
+  console.log("Value is " + transitOptions);
   var transit = parseFloat(transitOptions);
   console.log(transit);
   calculateEmissions(distanceInput, transit);
+
 };
 
 function getDrivingOptions(distanceInput){
-  var d = document.getElementById("vehicle-options");
+  var d = document.getElementById("vehicle-types");
+  d.style.display = "inline-block";
   var drivingOptions = d.options[d.selectedIndex].value;
+  console.log("Value is " + drivingOptions);
   var transit = parseFloat(drivingOptions);
   console.log(transit);
-  calculateEmissions(distanceInput, transit);
+  // calculateEmissions(distanceInput, transit);
 };
 
 function getBicyclingOptions(distanceInput){
@@ -155,12 +161,10 @@ AutocompleteDirectionsHandler.prototype.route = function() {
           }else if (travelType === 'BICYCLING')
             console.log("hey, good job!");
           else if (travelType === 'TRANSIT'){
-            var t = document.getElementById("transit-options");
-            t.style.display = "inline-block";
+
             getTransitOptions(distanceInput);
           }else if (travelType === 'DRIVING'){
-            var d = document.getElementById("vehicle-options");
-            d.style.display = "inline-block";
+
             getDrivingOptions(distanceInput);
       };
     };
