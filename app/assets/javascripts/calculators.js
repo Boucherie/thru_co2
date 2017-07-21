@@ -1,13 +1,11 @@
-console.log('in calculators.js');
-
-
+// console.log('in calculators.js');
 
 function calculateEmissions(distanceInput, transit) {
+  debugger
   distanceInKilometers = distanceInput / 1000;
   emissions = (distanceInKilometers * transit);
-  console.log(emissions);
+  console.log("emissions: " + emissions);
 }; //this function works when called
-
 
 
 function getTransitOptions(distanceInput){
@@ -17,9 +15,14 @@ function getTransitOptions(distanceInput){
   var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
   console.log("Value is " + transitOptions);
   var transit = parseFloat(transitOptions);
-  console.log(transit);
+  // console.log(transit);
+  transitMenu.addEventListener('change', function(){
+    var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
+    var transit = parseFloat(transitOptions);
+    calculateEmissions(distanceInput, transit);
+    // console.log("emissions: " + emissions);
+  })
   calculateEmissions(distanceInput, transit);
-
 };
 
 function getDrivingOptions(distanceInput){
@@ -147,22 +150,23 @@ AutocompleteDirectionsHandler.prototype.route = function() {
         elementdis.innerHTML = distance;
       var distanceInput = response.routes[0].legs[0].distance.value;
 
-      console.log(distanceInput);
+      // console.log(distanceInput);
 
 
       function checkMode(travelType){
-        console.log(me);
-        console.log(me.travelMode);
+        // console.log(me);
+        // console.log(me.travelMode);
 
         travelType = me.travelMode;
 
           if (travelType === 'WALKING'){
-            console.log("hey, good job!");
-          }else if (travelType === 'BICYCLING')
-            console.log("hey, good job!");
-          else if (travelType === 'TRANSIT'){
+            // console.log("hey, good job!");
+          }else if (travelType === 'BICYCLING'){
+            // console.log("hey, good job!");
+          }else if (travelType === 'TRANSIT'){
 
             getTransitOptions(distanceInput);
+
           }else if (travelType === 'DRIVING'){
 
             getDrivingOptions(distanceInput);
