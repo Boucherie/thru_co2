@@ -26,18 +26,24 @@ function getTransitEmissions(){
   var emissionsLocalBus = 0.10172
   var emissionsSubway = 0.05789
   var emissionsFerry = 0.11606
-  return calculateEmissions(distanceInput, emissionsLocalBus);
-
+  // if #transit-types id=
+  calculateEmissions(distanceInput, emissionsLocalBus)
 };//use this for switch cases; options laid out in test_map.html
 
 
 getTransitEmissions();
 
 // form starts here- still trying to append the result
-finalTransitEmissions = getTransitEmissions();
-var selectTransit = document.selectElementById('transit_display');
-selectTransit.innerHTML = finalResult;
+// finalTransitEmissions = getTransitEmissions();
+// var selectTransit = document.selectElementById('transit_display');
+// selectTransit.innerHTML = finalResult;
 // form ends here
+
+// event listener
+
+varheavyRailSelect = document.forms['#heavy-rail'];
+var emissionsHeavyRail = 0.04885;
+
 
 // Vehicle Type - wrap in a function
 // car emissions rates from US values
