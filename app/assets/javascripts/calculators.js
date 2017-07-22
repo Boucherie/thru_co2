@@ -6,16 +6,25 @@
 // };
 
 function calculateEmissions(distanceInput, transit) {
-  //debugger
+  //calculation
   distanceInKilometers = distanceInput / 1000;
   emissions = (distanceInKilometers * transit);
   console.log("emissions: " + emissions + " kgCO2e");
-  yourEmissions = parseFloat(emissions);
+  // score generation
+  yourEmissions = parseFloat(emissions).toFixed(2);
   bikeEmissions = 0.025 * distanceInKilometers;
 
-  score = (bikeEmissions / yourEmissions) * 100;
+  score = (bikeEmissions.toFixed(2) / yourEmissions) * 100;
   console.log("Your Score: " + score);
-  // updateEmissionsDisplay(emissions);
+
+  emissionsToDisplay = emissions.toFixed(2).toString();
+  scoreToDisplay = score.toFixed(2).toString();
+
+  getEmissionsDiv = document.getElementById("emissions-value");
+  getEmissionsDiv.innerText = emissionsToDisplay + " kgCO2e";
+  getScoreDiv = document.getElementById("score-value");
+  getScoreDiv.innerText = scoreToDisplay + "%";
+    // updateEmissionsDisplay(emissions);
 }; //this function works when called
 
 

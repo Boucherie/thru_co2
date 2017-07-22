@@ -23,37 +23,39 @@
   <div class="dis">
     Distance: <span id="distance"></span>
   </div>
-
-  <form id="transit-types">
-    <select id="transit-options">
-      <option value="0.04885">Heavy Rail</option>
-      <option value="0.05363"= >LRT</option>
-      <option value="0.10172"= >Local Bus</option>
-      <option value="0.05789"= >Subway</option>
-    </select>
-  </form>
-
-
-
-  <form id="vehicle-types">
-    <select id="vehicle-options">
-      <option value="0.23606">Car (Gasoline)</option>
-      <option value="0.27361"= >Car (Diesel)</option>
-      <option value="0.16459"= >Car (Hybrid)</option>
-      <option value="0.23514"= >4x4</option>
-      <option value="0.23691"= >Car (Sports Model)</option>
-      <option value="0.11978"= >Moped / Scooter</option>
-      <option value="0.12762"= >Motorcycle</option>
-    </select>
-  </form>
-
   <div id="emissions-display-box">
-    <p id="emissions-display-statement">Your CO2 emissions: </p>
-    <p id="score-display-statement">Your Score: </p>
+    <form id="transit-types">
+      <select id="transit-options">
+        <option value="0.04885">Heavy Rail</option>
+        <option value="0.05363"= >LRT</option>
+        <option value="0.10172"= >Local Bus</option>
+        <option value="0.05789"= >Subway</option>
+      </select>
+    </form>
 
+
+
+    <form id="vehicle-types">
+      <select id="vehicle-options">
+        <option value="0.23606">Car (Gasoline)</option>
+        <option value="0.27361"= >Car (Diesel)</option>
+        <option value="0.16459"= >Car (Hybrid)</option>
+        <option value="0.23514"= >4x4</option>
+        <option value="0.23691"= >Car (Sports Model)</option>
+        <option value="0.11978"= >Moped / Scooter</option>
+        <option value="0.12762"= >Motorcycle</option>
+      </select>
+    </form>
+
+
+      <p id="emissions-display-statement">Your CO2 emissions: </p>
+      <p id="emissions-value"> --- </p>
   </div>
 
-
+  <div id="score-display-box">
+    <p id="score-display-statement">Your Score: </p>
+    <p id="score-value"> --- </p>
+  </div>
     <!-- <button id="pick-walking">Walk </button>
     <button id="pick-bicycling">Cycle </button>
     <button id="pick-transit">Transit </button>
