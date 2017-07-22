@@ -1,10 +1,16 @@
 // console.log('in calculators.js');
 
+// function updateEmissionsDisplay(value){
+//   emissionsDisplay = querySelector("#emissions-display-statement");
+//   emissionsDisplay.innerHTML = "Your CO2 emissions: " + value;
+// };
+
 function calculateEmissions(distanceInput, transit) {
-  debugger
+  //debugger
   distanceInKilometers = distanceInput / 1000;
   emissions = (distanceInKilometers * transit);
   console.log("emissions: " + emissions);
+  updateEmissionsDisplay(emissions);
 }; //this function works when called
 
 
@@ -28,11 +34,18 @@ function getTransitOptions(distanceInput){
 function getDrivingOptions(distanceInput){
   var d = document.getElementById("vehicle-types");
   d.style.display = "inline-block";
-  var drivingOptions = d.options[d.selectedIndex].value;
+  var drivingMenu = document.getElementById("vehicle-options");
+  var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
   console.log("Value is " + drivingOptions);
   var transit = parseFloat(drivingOptions);
+  drivingMenu.addEventListener('change', function(){
+    var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
+    var transit = parseFloat(drivingOptions);
+    calculateEmissions(distanceInput, transit);
+    // console.log("emissions: " + emissions);
+  })
   console.log(transit);
-  // calculateEmissions(distanceInput, transit);
+  calculateEmissions(distanceInput, transit);
 };
 
 function getBicyclingOptions(distanceInput){
@@ -156,24 +169,21 @@ AutocompleteDirectionsHandler.prototype.route = function() {
       function checkMode(travelType){
         // console.log(me);
         // console.log(me.travelMode);
-
         travelType = me.travelMode;
-
           if (travelType === 'WALKING'){
             // console.log("hey, good job!");
+            getWalkingOptions(distanceInput)
           }else if (travelType === 'BICYCLING'){
             // console.log("hey, good job!");
+            getBicyclingOptions(distanceInput)
           }else if (travelType === 'TRANSIT'){
-
             getTransitOptions(distanceInput);
-
           }else if (travelType === 'DRIVING'){
-
             getDrivingOptions(distanceInput);
-      };
-    };
+          };
+        };
       checkMode();
-
+        // ajax POST to /users here
     } else {
       window.alert('Directions request failed due to ' + status);
     }
