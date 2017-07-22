@@ -1,10 +1,5 @@
-// console.log('in calculators.js');
 
-// function updateEmissionsDisplay(value){
-//   emissionsDisplay = querySelector("#emissions-display-statement");
-//   emissionsDisplay.innerHTML = "Your CO2 emissions: " + value;
-// };
-
+// Primary calculator function
 function calculateEmissions(distanceInput, transit) {
   //calculation
   distanceInKilometers = distanceInput / 1000;
@@ -16,19 +11,28 @@ function calculateEmissions(distanceInput, transit) {
 
   score = (bikeEmissions.toFixed(2) / yourEmissions) * 100;
   console.log("Your Score: " + score);
-
+  // emissions and score display
   emissionsToDisplay = emissions.toFixed(2).toString();
   scoreToDisplay = score.toFixed(2).toString();
-
   getEmissionsDiv = document.getElementById("emissions-value");
   getEmissionsDiv.innerText = emissionsToDisplay + " kgCO2e";
   getScoreDiv = document.getElementById("score-value");
   getScoreDiv.innerText = scoreToDisplay + "%";
-    // updateEmissionsDisplay(emissions);
-}; //this function works when called
+};
 
 
+function hideBothForms(){
+  var t = document.getElementById("transit-types");
+  var d = document.getElementById("vehicle-types");
+  if (d.style.visibility = "visible"){
+    d.style.visibility = "hidden";
+  }; 
+  if (t.style.visibility = "visible"){
+      t.style.visibility = "hidden";
+  };
+};
 
+// Selects form element options through DOM and calls the calculator
 function getTransitOptions(distanceInput){
   var t = document.getElementById("transit-types");
   var d = document.getElementById("vehicle-types");
@@ -45,10 +49,8 @@ function getTransitOptions(distanceInput){
     var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
     var transit = parseFloat(transitOptions);
     calculateEmissions(distanceInput, transit);
-    // console.log("emissions: " + emissions);
-  })
+  });
   calculateEmissions(distanceInput, transit);
-
 };
 
 function getDrivingOptions(distanceInput){
@@ -57,7 +59,7 @@ function getDrivingOptions(distanceInput){
   d.style.visibility = "visible";
   if (t.style.visibility = "visible"){
     t.style.visibility = "hidden";
-  }
+  };
   var drivingMenu = document.getElementById("vehicle-options");
   var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
   console.log("Value is " + drivingOptions);
@@ -73,18 +75,20 @@ function getDrivingOptions(distanceInput){
 };
 
 function getBicyclingOptions(distanceInput){
+  hideBothForms();
   var transit = 0.025;
   console.log(transit);
   calculateEmissions(distanceInput, transit);
 };
 
 function getWalkingOptions(distanceInput){
+  hideBothForms();
   var transit = 0.04;
   console.log(transit);
   calculateEmissions(distanceInput, transit);
 };
 
-
+// Google Maps API code begins
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     mapTypeControl: false,
@@ -124,8 +128,6 @@ function AutocompleteDirectionsHandler(map) {
   this.setupClickListener('changemode-transit', 'TRANSIT');
   this.setupClickListener('changemode-driving', 'DRIVING');
 
-
-
   this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
   this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
 
@@ -161,9 +163,9 @@ AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(aut
     }
     me.route();
   });
-
 };
 
+// Selects a route and pulls distanceInput through the DOM
 AutocompleteDirectionsHandler.prototype.route = function() {
   if (!this.originPlaceId || !this.destinationPlaceId) {
     return;
@@ -183,10 +185,7 @@ AutocompleteDirectionsHandler.prototype.route = function() {
         var elementdis =document.querySelector('#distance');
         elementdis.innerHTML = distance;
       var distanceInput = response.routes[0].legs[0].distance.value;
-
       // console.log(distanceInput);
-
-
       function checkMode(travelType){
         // console.log(me);
         // console.log(me.travelMode);
@@ -204,7 +203,7 @@ AutocompleteDirectionsHandler.prototype.route = function() {
           };
         };
       checkMode();
-        // ajax POST to /users here
+        // generate button, ajax POST to /users here
     } else {
       window.alert('Directions request failed due to ' + status);
     }
