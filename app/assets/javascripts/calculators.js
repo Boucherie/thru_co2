@@ -9,9 +9,15 @@ function calculateEmissions(distanceInput, transit) {
   //debugger
   distanceInKilometers = distanceInput / 1000;
   emissions = (distanceInKilometers * transit);
-  console.log("emissions: " + emissions);
-  updateEmissionsDisplay(emissions);
+  console.log("emissions: " + emissions + " kgCO2e");
+  yourEmissions = parseFloat(emissions);
+  bikeEmissions = 0.025 * distanceInKilometers;
+
+  score = (bikeEmissions / yourEmissions) * 100;
+  console.log("Your Score: " + score);
+  // updateEmissionsDisplay(emissions);
 }; //this function works when called
+
 
 
 function getTransitOptions(distanceInput){
@@ -29,6 +35,7 @@ function getTransitOptions(distanceInput){
     // console.log("emissions: " + emissions);
   })
   calculateEmissions(distanceInput, transit);
+
 };
 
 function getDrivingOptions(distanceInput){
@@ -60,9 +67,6 @@ function getWalkingOptions(distanceInput){
   calculateEmissions(distanceInput, transit);
 };
 
-
-
-// SCORES: [(bike emissions / actual emissions)- 1] * 100
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
