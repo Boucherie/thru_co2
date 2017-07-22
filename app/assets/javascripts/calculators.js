@@ -31,7 +31,7 @@ function calculateEmissions(distanceInput, transit) {
 
 function getTransitOptions(distanceInput){
   var t = document.getElementById("transit-types");
-  t.style.display = "inline-block";
+  t.style.visibility = "visible";
   var transitMenu = document.getElementById("transit-options");
   var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
   console.log("Value is " + transitOptions);
@@ -49,7 +49,7 @@ function getTransitOptions(distanceInput){
 
 function getDrivingOptions(distanceInput){
   var d = document.getElementById("vehicle-types");
-  d.style.display = "inline-block";
+  d.style.visibility = "visible";
   var drivingMenu = document.getElementById("vehicle-options");
   var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
   console.log("Value is " + drivingOptions);
