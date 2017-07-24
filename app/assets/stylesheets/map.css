@@ -1,15 +1,16 @@
 #map {
+  margin: auto;
   height: 75%;
-  width: 100%;
+  width: 80%;
   border: 1px solid transparent;
   box-shadow: 3px 3px 3px 3px #999;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
-  margin: 10%;
+  margin: 0;
   padding: 0;
-}
+  }
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;
@@ -27,10 +28,10 @@ html, body {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
-  margin-left: 12px;
+  margin-left: 15px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
-  width: 200px;
+  width: 300px;
 }
 
 #origin-input:focus,
@@ -41,27 +42,27 @@ html, body {
 #mode-selector {
   color: #fff;
   background-color: #4d90fe;
-  margin-left: 12px;
+  margin-left: 15px;
   padding: 5px 11px 0px 11px;
 }
 
 #mode-selector label {
   font-family: Roboto;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
 }
 
 .dis {
   color: #532207;
-  float: right;
+  text-align: center;
   font-family: Roboto;
-  font-size: 17px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 #distance {
   font-family: Roboto;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
   color: #135c8a;
 }
