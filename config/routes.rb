@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # resource :users, only: %i(new create)
   post 'users' => 'users#create'
   get 'users/new' => 'users#new'
+  get 'users/show' => 'users#show'
 
 
 resources :sessions
