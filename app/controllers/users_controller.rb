@@ -18,14 +18,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    unless current_user
-      flash[:alert] = ["Must be logged in to view this account!"]
-      redirect_to root_path
-      return
-    end
+    # unless current_user
+    #   flash[:alert] = ["Must be logged in to view this account!"]
+    #   redirect_to root_path
+    #   return
+    # end
     @user = User.find(params[:id])
 
-    user_average = user_ave
+    @user_average = user_ave
 
   end
 
@@ -37,10 +37,17 @@ class UsersController < ApplicationController
   def user_ave
     sum = 0
     @user.scores.all.each do |score|
-      sum += score
+      sum += score[:score]
     end
     ave = sum / @user.scores.all.length
   end
 
-
+# @user.scores[1].score
+#
+# user_score_arry = []
+#
+# @user.scores.each do
+#   user_score_arry.push(scores.score)
+# end
+# user_score_arry
 end
