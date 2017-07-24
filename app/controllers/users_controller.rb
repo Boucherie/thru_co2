@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def Create
+  def create
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
@@ -25,10 +25,21 @@ class UsersController < ApplicationController
     end
     @user = User.find(params[:id])
 
+    user_average = user_ave
+
   end
 
   def user_params
     {email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation]}
+  end
+
+
+  def user_ave
+    sum = 0
+    @user.scores.all.each do |score|
+      sum += score
+    end
+    ave = sum / @user.scores.all.length
   end
 
 
