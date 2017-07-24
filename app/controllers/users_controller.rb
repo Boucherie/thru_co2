@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     end
     @user = User.find(params[:id])
 
-    # @user.user_ave_sum
+    user_average = user_ave
 
   end
 
@@ -33,13 +33,14 @@ class UsersController < ApplicationController
     {email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation]}
   end
 
-  # def user_ave_sum
-  #   sum = 0
-  #   @user.scores.all.each do |score|
-  #     sum += score
-  #   end
-  #   sum
-  # end
+
+  def user_ave
+    sum = 0
+    @user.scores.all.each do |score|
+      sum += score
+    end
+    ave = sum / @user.scores.all.length
+  end
 
 
 end
