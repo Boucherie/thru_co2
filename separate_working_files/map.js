@@ -27,7 +27,9 @@ function getTransitEmissions(){
   var emissionsSubway = 0.05789
   var emissionsFerry = 0.11606
   // if #transit-types id=
-  calculateEmissions(distanceInput, emissionsLocalBus)
+    calculateEmissions(distanceInput, emissionsLocalBus){
+  };
+
 };//use this for switch cases; options laid out in test_map.html
 
 
