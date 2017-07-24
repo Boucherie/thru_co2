@@ -4,6 +4,7 @@
 
 #map {
   height: 75%;
+  border-radius: 20px;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -23,7 +24,9 @@ html, body {
 }
 
 #origin-input,
-#destination-input {
+#destination-input,
+#emissions-display-box,
+#score-display-box {
   background-color: #fff;
   font-family: Roboto;
   font-size: 15px;
@@ -84,6 +87,7 @@ html, body {
   padding: 2em;
   height: 100%;
   margin-right: 2%;
+  margin-top: 5%;
 }
 
 #score-value {
