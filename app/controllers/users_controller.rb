@@ -14,6 +14,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+  end
+
   def show
     unless current_user
       flash[:alert] = ["Must be logged in to view this account!"]
@@ -28,5 +31,5 @@ class UsersController < ApplicationController
     {email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation]}
   end
 
-  
+
 end
