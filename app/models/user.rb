@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
 
-  belongs_to :team
+  belongs_to :team , optional: true
   has_many :scores
 
   validates :email, uniqueness: true, presence: true, on: :create

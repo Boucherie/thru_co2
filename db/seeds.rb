@@ -3,13 +3,32 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create!(name: 'Luke', movie: movies.first)
 User.destroy_all
 Team.destroy_all
 Score.destroy_all
 
-User.create(
+
+Team.create!(
+  name: 'Minions',
+  id: 1,
+  team_score: 30
+)
+
+Team.create!(
+  name: 'Droids',
+  id: 2,
+  team_score: 75
+)
+
+Team.create!(
+  name: 'Daleks',
+  id: 3,
+  team_score: 80
+)
+
+User.create!(
   name: 'Minion1',
   email: 'email1@minions.com',
   team_id: 1,
@@ -17,8 +36,8 @@ User.create(
   password: 'password',
   password_confirmation: 'password'
 )
-
-User.create(
+puts "seeded"
+User.create!(
   name: 'Minion2',
   email: 'email2@minions.com',
   team_id: 1,
@@ -27,7 +46,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-User.create(
+User.create!(
   name: 'Minion3',
   email: 'email3@minions.com',
   team_id: 1,
@@ -36,7 +55,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-User.create(
+User.create!(
   name: 'Droid1',
   email: 'email1@droids.com',
   team_id: 2,
@@ -45,7 +64,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-User.create(
+User.create!(
   name: 'Droid2',
   email: 'email2@droids.com',
   team_id: 2,
@@ -54,7 +73,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-User.create(
+User.create!(
   name: 'Droid3',
   email: 'email3@droids.com',
   team_id: 2,
@@ -63,7 +82,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-User.create(
+User.create!(
   name: 'Dalek1',
   email: 'email1@daleks.com',
   team_id: 3,
@@ -72,7 +91,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-User.create(
+User.create!(
   name: 'Dalek2',
   email: 'email2@daleks.com',
   team_id: 3,
@@ -81,7 +100,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-User.create(
+User.create!(
   name: 'Dalek3',
   email: 'email3@daleks.com',
   team_id: 3,
@@ -90,25 +109,7 @@ User.create(
   password_confirmation: 'password'
 )
 
-Team.create(
-  name: 'Minions',
-  id: 1,
-  team_score: 30
-)
-
-Team.create(
-  name: 'Droids',
-  id: 2,
-  team_score: 75
-)
-
-Team.create(
-  name: 'Daleks',
-  id: 3,
-  team_score: 80
-)
-
-Score.create(
+Score.create!(
   user_id: 1,
   distance: 15,
   date: '011918',
@@ -116,7 +117,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 1,
   distance: 15,
   date: '011918',
@@ -124,7 +125,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 1,
   distance: 15,
   date: '012018',
@@ -132,7 +133,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 2,
   distance: 15,
   date: '011818',
@@ -140,7 +141,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 2,
   distance: 15,
   date: '011918',
@@ -148,7 +149,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 2,
   distance: 15,
   date: '012018',
@@ -156,7 +157,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 3,
   distance: 15,
   date: '011818',
@@ -164,7 +165,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 3,
   distance: 15,
   date: '011918',
@@ -172,7 +173,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 3,
   distance: 15,
   date: '011918',
@@ -180,7 +181,7 @@ Score.create(
   score: 20
 )
 
-Score.create(
+Score.create!(
   user_id: 4,
   distance: 50,
   date: '010118',
@@ -188,7 +189,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 4,
   distance: 50,
   date: '010218',
@@ -196,7 +197,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 4,
   distance: 50,
   date: '010218',
@@ -204,7 +205,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 5,
   distance: 50,
   date: '010118',
@@ -212,7 +213,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 5,
   distance: 50,
   date: '010218',
@@ -220,7 +221,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 5,
   distance: 50,
   date: '010318',
@@ -228,7 +229,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 6,
   distance: 50,
   date: '010118',
@@ -236,7 +237,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 6,
   distance: 50,
   date: '010218',
@@ -244,7 +245,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 6,
   distance: 50,
   date: '010318',
@@ -252,7 +253,7 @@ Score.create(
   score: 45
 )
 
-Score.create(
+Score.create!(
   user_id: 7,
   distance: 60,
   date: '010118',
@@ -260,7 +261,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 7,
   distance: 60,
   date: '010218',
@@ -268,7 +269,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 7,
   distance: 60,
   date: '010318',
@@ -276,7 +277,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 8,
   distance: 60,
   date: '010118',
@@ -284,7 +285,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 8,
   distance: 60,
   date: '010218',
@@ -292,7 +293,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 8,
   distance: 60,
   date: '010318',
@@ -300,7 +301,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 9,
   distance: 60,
   date: '010118',
@@ -308,7 +309,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 9,
   distance: 60,
   date: '010218',
@@ -316,7 +317,7 @@ Score.create(
   score: 70
 )
 
-Score.create(
+Score.create!(
   user_id: 9,
   distance: 60,
   date: '010318',
