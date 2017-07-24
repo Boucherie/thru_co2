@@ -1,7 +1,7 @@
-<div class="usercontainer"><h1>Sign up</h1>
-
+<div class="signupcontainer"><h1>Sign up !</h1>
+<hr>
   <%if @user.errors.any? %>
-    <div><
+    <div>
       <ul>
         <% @user.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -11,21 +11,22 @@
   <% end %>
 
   <%= form_for(@user) do |f| %>
+  <br>
     <p>
-      <%= f.label :email %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+      <%= f.label :email %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
       <%= f.email_field :email %>
     </p>
     <p>
-      <%= f.label :password %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+      <%= f.label :password %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
       <%= f.password_field :password %>
     </p>
     <p>
-      <%= f.label :password_confirmation %>
+      <%= f.label :password_confirmation %>&nbsp;
       <%= f.password_field :password_confirmation %>
     </p>
     <p>
       <br>
-      <input type="button" id="newuser" value="Create Account" onclick="window.location = '<%= calculators_path %>';">
+      <input type="button" id="newsignup" value="Create Account" onclick="window.location = '<%= calculators_path %>';">
       <!-- <%= f.submit "Create Account" %> -->
     </p>
   <% end %>

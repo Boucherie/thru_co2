@@ -1,16 +1,21 @@
 #map {
   margin: auto;
-  height: 75%;
-  width: 80%;
+  height: 500px;
+  width: 800px;
   border: 1px solid transparent;
   box-shadow: 3px 3px 3px 3px #999;
+  opacity: 0.9;
 }
-/* Optional: Makes the sample page fill the window. */
+#map:hover {
+  opacity: 1;
+}
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   }
+  
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;
