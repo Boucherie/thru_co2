@@ -12,12 +12,28 @@ function calculateEmissions(distanceInput, transit) {
   score = (bikeEmissions.toFixed(2) / yourEmissions) * 100;
   console.log("Your Score: " + score);
   // emissions and score display
-  emissionsToDisplay = emissions.toFixed(2).toString();
-  scoreToDisplay = score.toFixed(2).toString();
-  getEmissionsDiv = document.getElementById("emissions-value");
+  var emissionsToDisplay = emissions.toFixed(2).toString();
+  var emissionsNum = parseFloat(emissions).toFixed(2);
+  var scoreToDisplay = score.toFixed(2).toString();
+  var scoreNum = parseFloat(score.toFixed(2));
+  var getEmissionsDiv = document.getElementById("emissions-value");
   getEmissionsDiv.innerText = emissionsToDisplay + " kgCO2e";
-  getScoreDiv = document.getElementById("score-value");
+  var getScoreDiv = document.getElementById("score-value");
   getScoreDiv.innerText = scoreToDisplay + "%";
+  var submitScore = document.getElementById("submit-score");
+  submitScore.addEventListener('click', function(){
+    $.ajax({
+      url: '/users/update',
+      method: "POST",
+      data: {"distanceInKilometers":distanceInKilometers, "emissionsNum":emissionsNum,
+        "scoreNum":scoreNum, "user_id":user_id},
+      dataType: 'json'
+    }).done(function(response){
+      console.log(response + 'data sent!');
+    }).fail(function(response){
+      console.log('data failed to send.');
+    });
+  });
 };
 
 
@@ -26,7 +42,7 @@ function hideBothForms(){
   var d = document.getElementById("vehicle-types");
   if (d.style.visibility = "visible"){
     d.style.visibility = "hidden";
-  }; 
+  };
   if (t.style.visibility = "visible"){
       t.style.visibility = "hidden";
   };
@@ -203,6 +219,9 @@ AutocompleteDirectionsHandler.prototype.route = function() {
           };
         };
       checkMode();
+
+
+
         // generate button, ajax POST to /users here
     } else {
       window.alert('Directions request failed due to ' + status);

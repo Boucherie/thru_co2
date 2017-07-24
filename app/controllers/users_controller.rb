@@ -3,8 +3,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def Create
+  def create
     @user = User.new(user_params)
+
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path
@@ -12,6 +13,15 @@ class UsersController < ApplicationController
       flash.now[:alert] = @user.errors.full_messages
       render :new
     end
+  end
+
+  def update
+    # distanceInKilometers
+    # emissions
+    # score
+    # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
+    redirect_to root_path
+
   end
 
   def index
