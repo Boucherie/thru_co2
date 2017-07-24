@@ -1,7 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 #map {
   margin: auto;
-  height: 500px;
-  width: 800px;
+
+  height: 75%;
+  border-radius: 20px;
+  width: 70%;
+  /*height: 500px;
+  width: 800px;*/
   border: 1px solid transparent;
   box-shadow: 3px 3px 3px 3px #999;
   opacity: 0.9;
@@ -14,6 +22,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background :
+  url('/assets/5-watercolor-map-of-the-world-map-michael-tompsett.jpg') no-repeat;
+  background-position: top center;
   }
   
 .controls {
@@ -28,7 +39,9 @@ html, body {
 }
 
 #origin-input,
-#destination-input {
+#destination-input,
+#emissions-display-box,
+#score-display-box {
   background-color: #fff;
   font-family: Roboto;
   font-size: 15px;
@@ -57,6 +70,44 @@ html, body {
   font-weight: 300;
 }
 
+#emissions-display-box {
+    overflow: hidden;
+    display: block;
+}
+
+#transit-types,
+#vehicle-types {
+  padding: 0.5em;
+  visibility: hidden;
+}
+
+#emissions-display-box,
+#score-display-box {
+  display: block;
+  width: 33%;
+  padding: 2em;
+  opacity: 0.7;
+  border: dotted black;
+  border-width: 10px 5px;
+  border-radius: 20px 60px;
+}
+#emissions-display-box {
+  float: left;
+  margin-left: 15%;
+}
+
+#score-display-box {
+  float: right;
+  text-align: center;
+  padding: 2em;
+  height: 100%;
+  margin-right: 15%;
+
+}
+
+#score-value {
+  padding: 1em;
+
 .dis {
   color: #532207;
   text-align: center;
@@ -70,4 +121,5 @@ html, body {
   font-size: 30px;
   font-weight: 700;
   color: #135c8a;
+
 }
