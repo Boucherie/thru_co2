@@ -1,3 +1,28 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  color: #fbca82;
+  background-color: #2d6e8c;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 600px;
+  padding: 6px;
+}
+.usercontainer {
+  text-align: center;
+  color: #173d4e;
+}
+.field {
+  padding: 2px;
+}
+#userlogin {
+  color: #2d6e8c;
+  border: 2px solid;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 7px;
+  width: 90px;
+}

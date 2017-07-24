@@ -1,35 +1,87 @@
 * {
     font-family: Roboto;
 }
+html {
+  margin: 0px;
+  height: auto;
+}
 
 body {
   background :
-  url('/assets/google-maps.jpg') no-repeat;
+  url('/assets/5-watercolor-map-of-the-world-map-michael-tompsett.jpg') no-repeat;
   background-position: top center;
-  background-size: auto;
-  margin: auto;
+  margin: 0px;
+  height: auto;
   width: 100%;
 }
 
 .hello {
-    font-size: 4em;
-    font-weight: 800;
+    color: white;
+    background-color: darkblue;
     text-align: center;
-    color: #cb1608;
-    opacity: 1;
+    font-size: 3em;
+    font-weight: 800;
+    border: 3px solid green;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 320px;
+    padding: 15px;
+    width: 80%;
+    /*color: #cb1608;
+    border: 3px solid darkblue;
+    margin-top: 7%;
+    margin-right: 30px;
+    margin-left: 30%;
+    background-color: #fefef74d;
+    background-color: #fbfb8599;*/
+    overflow: hidden;
+    opacity: 0.8;
+}
+.container {
+    margin-right: 50px;
 }
 
-input#signin,
-input#login,
-input#guestuser {
-  float: right;
-  font-weight: 700;
-  font-size: 12px;
+/*#register,
+#login,
+#guestuser {
   color: darkblue;
+  font-weight: 700;
+  font-size: 14px;
+  float: right;
+  text-align: center;
   margin: 3.5px;
   padding: 4px;
   border-radius: 8px;
   border-color: darkblue;
-  /*text-decoration: underline;*/
-  /*border: none;*/
+}*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-left: 96.8%;
+  padding: 0;
+  width: 110px;
+  background-color: #cb1608;
+  opacity: 0.8;
+}
+li  a {
+  display: block;
+  color: #cfcfcf;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #cfcfcf;
+  color: black;
+}
+h4 {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  margin-top: 440px;
+  opacity: 0.7;
 }
