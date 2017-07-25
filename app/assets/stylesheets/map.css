@@ -4,10 +4,6 @@
   width: 800px;
   border: 1px solid transparent;
   box-shadow: 3px 3px 3px 3px #999;
-  opacity: 0.9;
-}
-#map:hover {
-  opacity: 1;
 }
 
 html, body {
@@ -15,7 +11,7 @@ html, body {
   margin: 0;
   padding: 0;
   }
-  
+
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;

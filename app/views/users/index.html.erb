@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale:1.0, width=devise-width" >
     <title>Thru CO2</title>
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="javascripts/main.js"></script>
@@ -19,10 +20,13 @@
         <%= password_field_tag :password %>
       </div>
       <br>
-      <input type="button" id="userlogin" value="Log In" onclick="window.location = '<%= calculators_path %>';">
-      <br>
       <div class="userlinks">
+        <input type="button" id="user" value="Log In" onclick="popup();">
+
+        <input type="button" id="userlogin" value="Log In" onclick="window.location = '<%= calculators_path %>';">
+      <br>
         <input type="button" id="newuser" value="Register" onclick="window.location = '<%= users_new_path %>';">
+
         <input type="button" id="guestuser" value="Guest User" onclick="window.location = '<%= calculators_path %>';">
       </div>
     </div>
