@@ -111,7 +111,7 @@ User.create!(
 
 Score.create!(
   user_id: 1,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '011918',
   # transit_mode: 'car',
   score: 20
@@ -119,7 +119,7 @@ Score.create!(
 
 Score.create!(
   user_id: 1,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '011918',
   # transit_mode: 'car',
   score: 20
@@ -127,7 +127,7 @@ Score.create!(
 
 Score.create!(
   user_id: 1,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '012018',
   # transit_mode: 'car',
   score: 20
@@ -135,7 +135,7 @@ Score.create!(
 
 Score.create!(
   user_id: 2,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '011818',
   # transit_mode: 'car',
   score: 20
@@ -143,7 +143,7 @@ Score.create!(
 
 Score.create!(
   user_id: 2,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '011918',
   # transit_mode: 'car',
   score: 20
@@ -151,7 +151,7 @@ Score.create!(
 
 Score.create!(
   user_id: 2,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '012018',
   # transit_mode: 'car',
   score: 20
@@ -159,7 +159,7 @@ Score.create!(
 
 Score.create!(
   user_id: 3,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '011818',
   # transit_mode: 'car',
   score: 20
@@ -167,7 +167,7 @@ Score.create!(
 
 Score.create!(
   user_id: 3,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '011918',
   # transit_mode: 'car',
   score: 20
@@ -175,7 +175,7 @@ Score.create!(
 
 Score.create!(
   user_id: 3,
-  distance: 15,
+  distanceInKilometers: 15,
   date: '011918',
   # transit_mode: 'car',
   score: 20
@@ -183,7 +183,7 @@ Score.create!(
 
 Score.create!(
   user_id: 4,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010118',
   # transit_mode: 'subway',
   score: 45
@@ -191,7 +191,7 @@ Score.create!(
 
 Score.create!(
   user_id: 4,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010218',
   # transit_mode: 'subway',
   score: 45
@@ -199,7 +199,7 @@ Score.create!(
 
 Score.create!(
   user_id: 4,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010218',
   # transit_mode: 'subway',
   score: 45
@@ -207,7 +207,7 @@ Score.create!(
 
 Score.create!(
   user_id: 5,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010118',
   # transit_mode: 'subway',
   score: 45
@@ -215,7 +215,7 @@ Score.create!(
 
 Score.create!(
   user_id: 5,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010218',
   # transit_mode: 'subway',
   score: 45
@@ -223,7 +223,7 @@ Score.create!(
 
 Score.create!(
   user_id: 5,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010318',
   # transit_mode: 'subway',
   score: 45
@@ -231,7 +231,7 @@ Score.create!(
 
 Score.create!(
   user_id: 6,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010118',
   # transit_mode: 'subway',
   score: 45
@@ -239,7 +239,7 @@ Score.create!(
 
 Score.create!(
   user_id: 6,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010218',
   # transit_mode: 'subway',
   score: 45
@@ -247,7 +247,7 @@ Score.create!(
 
 Score.create!(
   user_id: 6,
-  distance: 50,
+  distanceInKilometers: 50,
   date: '010318',
   # transit_mode: 'subway',
   score: 45
@@ -255,7 +255,7 @@ Score.create!(
 
 Score.create!(
   user_id: 7,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010118',
   # transit_mode: 'walk',
   score: 70
@@ -263,7 +263,7 @@ Score.create!(
 
 Score.create!(
   user_id: 7,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010218',
   # transit_mode: 'walk',
   score: 70
@@ -271,7 +271,7 @@ Score.create!(
 
 Score.create!(
   user_id: 7,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010318',
   # transit_mode: 'walk',
   score: 70
@@ -279,7 +279,7 @@ Score.create!(
 
 Score.create!(
   user_id: 8,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010118',
   # transit_mode: 'walk',
   score: 70
@@ -287,7 +287,7 @@ Score.create!(
 
 Score.create!(
   user_id: 8,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010218',
   # transit_mode: 'walk',
   score: 70
@@ -295,7 +295,7 @@ Score.create!(
 
 Score.create!(
   user_id: 8,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010318',
   # transit_mode: 'walk',
   score: 70
@@ -303,7 +303,7 @@ Score.create!(
 
 Score.create!(
   user_id: 9,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010118',
   # transit_mode: 'walk',
   score: 70
@@ -311,7 +311,7 @@ Score.create!(
 
 Score.create!(
   user_id: 9,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010218',
   # transit_mode: 'walk',
   score: 70
@@ -319,7 +319,7 @@ Score.create!(
 
 Score.create!(
   user_id: 9,
-  distance: 60,
+  distanceInKilometers: 60,
   date: '010318',
   # transit_mode: 'walk',
   score: 70

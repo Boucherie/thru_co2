@@ -1,5 +1,7 @@
 {
   "name": "thru_co2",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "chart.js": "^2.6.0"
+  }
 }
