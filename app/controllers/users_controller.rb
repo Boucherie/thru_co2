@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 
   def update
     # distanceInKilometers
-    # emissions
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
     redirect_to root_path
