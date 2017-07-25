@@ -8,9 +8,10 @@
   width: 400px;
   height: 200px;
   padding-top: 20px;
-  margin-left: 1455px;
   margin-top: 0px;
   margin-bottom: 585px;
+  position: absolute;
+  right: 0;
   font-size: 17px;
   font-weight: 500;
   opacity: 0.9;
@@ -24,7 +25,8 @@
   line-height: 2;
 }
 
-#userlogin {
+#userlogin,
+#user {
   font-size: 17px;
   color: #2d6e8c;
   border: 2px solid;
@@ -36,8 +38,10 @@
   margin-bottom: 15px;
   font-size: 16px;
   font-weight: 800;
+  display: inline-grid;
 }
 
+#user
 #userlogin:hover {
   color: #cfcfcf;
   background-color: #2d6e8c;
@@ -57,4 +61,67 @@
   margin-bottom: 35px;
   font-size: 16px;
   font-weight: 800;
+}
+
+#user {
+  display: none;
+}
+
+@media screen and (max-width: 991px){
+    .usercontainer {
+      overflow: hidden;
+      background-color: inherit;
+    }
+    .field {
+      display: none;
+    }
+    #userlogin {
+      display: none;
+    }
+    #user,
+    #newuser,
+    #guestuser {
+      display: block;
+      height: 50px;
+      width: 130px;
+      color: #cfcfcf;
+      background-color: #2d6e8c;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      display: flex;
+      border-style: none;
+      border-radius: 0;
+      text-decoration: underline;
+    }
+    #newuser {
+      right: 0px;
+      top: 45px;
+    }
+    #guestuser {
+      right: 0px;
+      top: 88px;
+    }
+    #user:hover {
+      background-color: darkblue;
+    }
+    #newuser:hover {
+      background-color: darkblue;
+    }
+    #guestuser:hover {
+      background-color: darkblue;
+    }
+    .usercontainer .show {
+      visibility: visible;
+      -webkit-animation: fadeIn ls;
+      animation: fadeIn ls;
+    }
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
 }
