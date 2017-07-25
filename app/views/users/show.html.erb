@@ -1,9 +1,14 @@
 <h1>My account</h1>
 
 <h2><%= @user.name %></h2>
-<h2><%= @user.score %></h2>
-<h2><%= @user.team %></h2>
+<h2>Team: <%= @user.team.name %></h2>
+<h2>Average Score: <%= @user_average %></h2>
 
-<p>stuff</p>
-<p>stuff</p>
-<p>stuff</p>
+<ul>
+  <% @user.scores.each do |score| %>
+    <li>Trip Date: <%= score[:date] %><br>
+        Distance: <%= score[:distance] %> km<br>
+        Trip Score: <%= score[:score] %>%
+    </li>
+  <% end %>
+</ul>

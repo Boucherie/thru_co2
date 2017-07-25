@@ -1,0 +1,21 @@
+<h1>Create A Team</h1>
+
+<% if @team.errors.any? %>
+<div>
+  <ul>
+    <% @team.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<%= form_for(@team) do |f|%>
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.submit "Create Team" %>
+</p>
+<% end %>

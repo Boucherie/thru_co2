@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,36 +8,28 @@
     <script src="javascripts/main.js"></script>
   </head>
   <body>
-    <!-- <img src="/assets/google-maps.jpg" alt="test"> -->
-  <!-- <marquee direction="left" width="100%" height="300" behavior="slide" scrollamount="5"> -->
-    <!-- <marquee direction="right" behavior="slide" scrollamount="5"> -->
     <h1 class="hello">Welcome To Thru CO2</h1>
-    <!-- /</marquee> -->
-  <!-- </marquee> -->
-    <div class = "container">
-      <!-- <input type="button" id="signin" value="Sign In" onclick="window.location = '<%= users_new_path %>';"> -->
-      <!-- <input type="button" id="login" value="Log In" onclick="window.location = '<%= sessions_new_path %>';"> -->
-      <!-- <input type="button" id="guestuser" value="Guest User" onclick="window.location = '<%= calculators_path %>';"> -->
-      <ul>
-        <div class="register">
-          <li>
-            <a href="<%= users_new_path %>">Register</a>
-          </li>
-        </div>
-        <div class="login">
-          <li>
-            <a href="<%= sessions_new_path %>">Log In</a>
-          </li>
-        </div>
-        <div class="guestuser">
-          <li>
-            <a href="<%= calculators_path %>"> Guest User</a>
-          </li>
-        </div>
-      </ul>
+    <%= form_tag sessions_path do %>
+    <div class="usercontainer">
+      <div class="field">
+        <%= label_tag :email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= text_field_tag :email, params[:email] %>
+      </div>
+      <div class="field">
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div>
+      <br>
+      <input type="button" id="userlogin" value="Log In" onclick="window.location = '<%= calculators_path %>';">
+      <br>
+      <div class="userlinks">
+        <input type="button" id="newuser" value="Register" onclick="window.location = '<%= users_new_path %>';">
+        <input type="button" id="guestuser" value="Guest User" onclick="window.location = '<%= calculators_path %>';">
+      </div>
     </div>
+    <% end %>
     <footer>
       <h4>&copy; Bitmaker 2017</h4>
     </footer>
-    </body>
+  </body>
 </html>

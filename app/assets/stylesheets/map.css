@@ -4,13 +4,20 @@
 
 #map {
   margin: auto;
+
   height: 75%;
   border-radius: 20px;
   width: 70%;
+  /*height: 500px;
+  width: 800px;*/
   border: 1px solid transparent;
   box-shadow: 3px 3px 3px 3px #999;
+  opacity: 0.9;
 }
-/* Optional: Makes the sample page fill the window. */
+#map:hover {
+  opacity: 1;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -19,6 +26,7 @@ html, body {
   url('/assets/5-watercolor-map-of-the-world-map-michael-tompsett.jpg') no-repeat;
   background-position: top center;
   }
+  
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;
