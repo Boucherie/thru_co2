@@ -1,14 +1,12 @@
 <h1><%= @team.name %></h1>
 
-<p><%= @team.team_score %></p>
-
 <!-- find team members where user.team_id = team_id -->
 
 <ul>
-  <li><%= @scores %> </li>
-  <!-- <%= User.all.each do |user| %>
-    <% if user.team_id == @team.id %>
-        <li><%= user.name %></li>
+  <% Score.all.each do |score| %>
+    <% if score.user.team_id == @team.id %>
+        <li><%= score.user.name %> | <%= score.score %>%</li>
     <% end %>
-  <% end %> -->
+  <% end %>
+
 </ul>
