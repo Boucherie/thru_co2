@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   # resource :users, only: %i(new create)
   post 'users' => 'users#create'
   get 'users/new' => 'users#new'
+  post 'users/update' => 'users#update'
   get 'users/show' => 'users#show'
+  resources :users
 
 
 resources :sessions
@@ -18,4 +20,6 @@ resources :sessions
   get 'sessions/new' => 'sessions#new'
 
   delete 'sessions' => 'sessions#destroy'
+
+
 end
