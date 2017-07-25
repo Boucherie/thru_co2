@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Find a Route</title>
-  </head>
-  <body>
+<div id="123"><%= current_user %></div>
+
     <input id="origin-input" class="controls" type="text"
         placeholder="Enter an origin location">
 
@@ -15,6 +10,9 @@
       <input type="radio" name="type" id="changemode-walking" checked="checked">
       <label for="changemode-walking">Walking</label>
 
+      <input type="radio" name="type" id="changemode-bicycling">
+      <label for="changemode-bicycling">Bicycling</label>
+
       <input type="radio" name="type" id="changemode-transit">
       <label for="changemode-transit">Transit</label>
 
@@ -22,15 +20,50 @@
       <label for="changemode-driving">Driving</label>
     </div>
 
-    <div id="map"></div>
-    <br>
-    <br>
-    <div class="dis">
-      Distance:  <span id="distance"></span>
+      <div id="map"></div>
+      <br>
+      <div id="display-dashboard">
+
+
+        <div id="emissions-display-box">
+        <div class="dis">
+          Distance: <span id="distance"></span>
+        </div>
+
+        <form id="transit-types">
+          <select id="transit-options">
+            <option value="0.04885">Heavy Rail</option>
+            <option value="0.05363"= >LRT</option>
+            <option value="0.10172"= >Local Bus</option>
+            <option value="0.05789"= >Subway</option>
+          </select>
+        </form>
+
+        <form id="vehicle-types">
+          <select id="vehicle-options">
+            <option value="0.23606">Car (Gasoline)</option>
+            <option value="0.27361"= >Car (Diesel)</option>
+            <option value="0.16459"= >Car (Hybrid)</option>
+            <option value="0.23514"= >4x4</option>
+            <option value="0.23691"= >Car (Sports Model)</option>
+            <option value="0.11978"= >Moped / Scooter</option>
+            <option value="0.12762"= >Motorcycle</option>
+          </select>
+        </form>
+
+          <p id="emissions-display-statement">Your CO2 emissions: </p>
+          <p id="emissions-value"> --- </p>
+      </div>
+
+      <div id="score-display-box">
+        <p id="score-display-statement">Your Score: </p>
+        <p id="score-value"> --- </p>
+        <button type="button" name="button" id="submit-score">Submit Your Route...</button>
+      </div>
     </div>
-  </body>
+
+</body>
 </html>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=GEM_Key&libraries=places&callback=initMap"
-
-      async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmFYgvCKS7H24sAGLJl1YwHwKugqWkGgQ&libraries=places&callback=initMap"
+          async defer></script>

@@ -2,9 +2,12 @@ class SessionsController < ApplicationController
   def new
   end
 
+
+=======
   def index
   end
 
+ 
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
@@ -15,6 +18,8 @@ class SessionsController < ApplicationController
       render "new"
     end
   end
+
+
 
   def destroy
     session[:user_id] = nil
