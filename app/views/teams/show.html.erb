@@ -5,9 +5,10 @@
 <!-- find team members where user.team_id = team_id -->
 
 <ul>
-  <%= User.all.each do |user| %>
+  <li><%= @scores %> </li>
+  <!-- <%= User.all.each do |user| %>
     <% if user.team_id == @team.id %>
         <li><%= user.name %></li>
     <% end %>
-  <% end %>
+  <% end %> -->
 </ul>
