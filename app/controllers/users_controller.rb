@@ -28,15 +28,14 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    unless current_user
+      flash[:alert] = ["You must be logged in first!"]
+      redirect_to root_path
+    end
     @user = User.find(params[:id])
 
     @user_average = user_ave
 
-  end
-
-  def user_params
-    {email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation]}
   end
 
 
@@ -48,5 +47,9 @@ class UsersController < ApplicationController
     ave = sum / @user.scores.all.length
   end
 
+  private
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
+  end
 
 end
