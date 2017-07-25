@@ -24,6 +24,7 @@ class UsersController < ApplicationController
     # distanceInKilometers
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
+    if xhr?
       redirect_to root_path
     else
       redirect_back_or_to @score

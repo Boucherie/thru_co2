@@ -15,6 +15,8 @@ gem 'groupdate'
 #group by date, time, hour etc
 gem "chartkick"
 # chartJS shortcut
+gem 'momentjs-rails'
+#momentJS time scales
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

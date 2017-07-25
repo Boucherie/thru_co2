@@ -10,5 +10,7 @@
         Distance: <%= score[:distance] %> km<br>
         Trip Score: <%= score[:score] %>%
     </li>
+    <%= line_chart Score.group_by_day(:created_at).count %>
+
   <% end %>
 </ul>
