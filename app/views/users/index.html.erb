@@ -25,7 +25,6 @@
       </div>
       <br>
       <div class="userlinks">
-        <input type="button" id="user" value="Log In" onclick="popup();">
 
         <input type="button" id="userlogin" value="Log In" onclick="window.location = '<%= calculators_path %>';">
       <br>
@@ -37,6 +36,13 @@
 
 
     <% end %>
+    <center>
+      <div class="smallscreen">
+        <input type="button" value="Login" id="login">
+        <input type="button" value="Register" id="new" onclick="window.location = '<%= users_new_path %>';">
+        <input type="button" value="Guest User" id="guest" onclick="window.location = '<%= calculators_path %>';">
+      </div>
+  </center>
     <footer>
       <h4>&copy; Bitmaker 2017</h4>
     </footer>

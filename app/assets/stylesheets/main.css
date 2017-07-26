@@ -1,6 +1,6 @@
 * {
     font-family: Roboto;
-    overflow: hidden;
+    /*overflow: auto;*/
 }
 html {
   margin: 0px;

@@ -21,4 +21,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+PLEASE DON'T ADD ANY STYLE IN HTML/BODY/* ATTRIBUTE

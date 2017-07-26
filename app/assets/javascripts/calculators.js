@@ -1,109 +1,3 @@
-
-// Primary calculator function
-function calculateEmissions(distanceInput, transit) {
-  //calculation
-  distanceInKilometers = distanceInput / 1000;
-  emissions = (distanceInKilometers * transit);
-  console.log("emissions: " + emissions + " kgCO2e");
-  // score generation
-  yourEmissions = parseFloat(emissions).toFixed(2);
-  bikeEmissions = 0.025 * distanceInKilometers;
-
-  score = (bikeEmissions.toFixed(2) / yourEmissions) * 100;
-  console.log("Your Score: " + score);
-  // emissions and score display
-  var emissionsToDisplay = emissions.toFixed(2).toString();
-  var emissionsNum = parseFloat(emissions).toFixed(2);
-  var scoreToDisplay = score.toFixed(2).toString();
-  var scoreNum = parseFloat(score.toFixed(2));
-  var getEmissionsDiv = document.getElementById("emissions-value");
-  getEmissionsDiv.innerText = emissionsToDisplay + " kgCO2e";
-  var getScoreDiv = document.getElementById("score-value");
-  getScoreDiv.innerText = scoreToDisplay + "%";
-  var submitScore = document.getElementById("submit-score");
-  submitScore.addEventListener('click', function(){
-    $.ajax({
-      url: '/users/update',
-      method: "POST",
-      data: {"distanceInKilometers":distanceInKilometers, "emissionsNum":emissionsNum,
-        "scoreNum":scoreNum, "user_id":user_id},
-      dataType: 'json'
-    }).done(function(response){
-      console.log(response + 'data sent!');
-    }).fail(function(response){
-      console.log('data failed to send.');
-    });
-  });
-};
-
-
-function hideBothForms(){
-  var t = document.getElementById("transit-types");
-  var d = document.getElementById("vehicle-types");
-  if (d.style.visibility = "visible"){
-    d.style.visibility = "hidden";
-  };
-  if (t.style.visibility = "visible"){
-      t.style.visibility = "hidden";
-  };
-};
-
-// Selects form element options through DOM and calls the calculator
-function getTransitOptions(distanceInput){
-  var t = document.getElementById("transit-types");
-  var d = document.getElementById("vehicle-types");
-  t.style.visibility = "visible";
-  if (d.style.visibility = "visible"){
-    d.style.visibility = "hidden";
-  }
-  var transitMenu = document.getElementById("transit-options");
-  var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
-  console.log("Value is " + transitOptions);
-  var transit = parseFloat(transitOptions);
-  // console.log(transit);
-  transitMenu.addEventListener('change', function(){
-    var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
-    var transit = parseFloat(transitOptions);
-    calculateEmissions(distanceInput, transit);
-  });
-  calculateEmissions(distanceInput, transit);
-};
-
-function getDrivingOptions(distanceInput){
-  var t = document.getElementById("transit-types");
-  var d = document.getElementById("vehicle-types");
-  d.style.visibility = "visible";
-  if (t.style.visibility = "visible"){
-    t.style.visibility = "hidden";
-  };
-  var drivingMenu = document.getElementById("vehicle-options");
-  var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
-  console.log("Value is " + drivingOptions);
-  var transit = parseFloat(drivingOptions);
-  drivingMenu.addEventListener('change', function(){
-    var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
-    var transit = parseFloat(drivingOptions);
-    calculateEmissions(distanceInput, transit);
-    // console.log("emissions: " + emissions);
-  })
-  console.log(transit);
-  calculateEmissions(distanceInput, transit);
-};
-
-function getBicyclingOptions(distanceInput){
-  hideBothForms();
-  var transit = 0.025;
-  console.log(transit);
-  calculateEmissions(distanceInput, transit);
-};
-
-function getWalkingOptions(distanceInput){
-  hideBothForms();
-  var transit = 0.04;
-  console.log(transit);
-  calculateEmissions(distanceInput, transit);
-};
-
 // Google Maps API code begins
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -227,4 +121,110 @@ AutocompleteDirectionsHandler.prototype.route = function() {
       window.alert('Directions request failed due to ' + status);
     }
   });
+};
+
+
+// Primary calculator function
+function calculateEmissions(distanceInput, transit) {
+  //calculation
+  distanceInKilometers = distanceInput / 1000;
+  emissions = (distanceInKilometers * transit);
+  console.log("emissions: " + emissions + " kgCO2e");
+  // score generation
+  yourEmissions = parseFloat(emissions).toFixed(2);
+  bikeEmissions = 0.025 * distanceInKilometers;
+
+  score = (bikeEmissions.toFixed(2) / yourEmissions) * 100;
+  console.log("Your Score: " + score);
+  // emissions and score display
+  var emissionsToDisplay = emissions.toFixed(2).toString();
+  var emissionsNum = parseFloat(emissions).toFixed(2);
+  var scoreToDisplay = score.toFixed(2).toString();
+  var scoreNum = parseFloat(score.toFixed(2));
+  var getEmissionsDiv = document.getElementById("emissions-value");
+  getEmissionsDiv.innerText = emissionsToDisplay + " kgCO2e";
+  var getScoreDiv = document.getElementById("score-value");
+  getScoreDiv.innerText = scoreToDisplay + "%";
+  var submitScore = document.getElementById("submit-score");
+  submitScore.addEventListener('click', function(){
+    $.ajax({
+      url: '/users/update',
+      method: "POST",
+      data: {"distanceInKilometers":distanceInKilometers, "emissionsNum":emissionsNum,
+        "scoreNum":scoreNum, "user_id":user_id},
+      dataType: 'json'
+    }).done(function(response){
+      console.log(response + 'data sent!');
+    }).fail(function(response){
+      console.log('data failed to send.');
+    });
+  });
+};
+
+
+function hideBothForms(){
+  var t = document.getElementById("transit-types");
+  var d = document.getElementById("vehicle-types");
+  if (d.style.visibility = "visible"){
+    d.style.visibility = "hidden";
+  };
+  if (t.style.visibility = "visible"){
+      t.style.visibility = "hidden";
+  };
+};
+
+// Selects form element options through DOM and calls the calculator
+function getTransitOptions(distanceInput){
+  var t = document.getElementById("transit-types");
+  var d = document.getElementById("vehicle-types");
+  t.style.visibility = "visible";
+  if (d.style.visibility = "visible"){
+    d.style.visibility = "hidden";
+  }
+  var transitMenu = document.getElementById("transit-options");
+  var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
+  console.log("Value is " + transitOptions);
+  var transit = parseFloat(transitOptions);
+  // console.log(transit);
+  transitMenu.addEventListener('change', function(){
+    var transitOptions = transitMenu.options[transitMenu.selectedIndex].value;
+    var transit = parseFloat(transitOptions);
+    calculateEmissions(distanceInput, transit);
+  });
+  calculateEmissions(distanceInput, transit);
+};
+
+function getDrivingOptions(distanceInput){
+  var t = document.getElementById("transit-types");
+  var d = document.getElementById("vehicle-types");
+  d.style.visibility = "visible";
+  if (t.style.visibility = "visible"){
+    t.style.visibility = "hidden";
+  };
+  var drivingMenu = document.getElementById("vehicle-options");
+  var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
+  console.log("Value is " + drivingOptions);
+  var transit = parseFloat(drivingOptions);
+  drivingMenu.addEventListener('change', function(){
+    var drivingOptions = drivingMenu.options[drivingMenu.selectedIndex].value;
+    var transit = parseFloat(drivingOptions);
+    calculateEmissions(distanceInput, transit);
+    // console.log("emissions: " + emissions);
+  })
+  console.log(transit);
+  calculateEmissions(distanceInput, transit);
+};
+
+function getBicyclingOptions(distanceInput){
+  hideBothForms();
+  var transit = 0.025;
+  console.log(transit);
+  calculateEmissions(distanceInput, transit);
+};
+
+function getWalkingOptions(distanceInput){
+  hideBothForms();
+  var transit = 0.04;
+  console.log(transit);
+  calculateEmissions(distanceInput, transit);
 };
