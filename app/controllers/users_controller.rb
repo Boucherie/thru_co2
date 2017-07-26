@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   end
 
   def index
-  #  render json: Task.group_by_day(:completed_at).count
+  
 
   end
 
