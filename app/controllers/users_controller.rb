@@ -45,11 +45,6 @@ class UsersController < ApplicationController
   end
 
   def index
-<<<<<<< HEAD
-=======
-
->>>>>>> 7e0b65f944d91ab444a1191e327451f8325e1ab8
-
 
   end
 
