@@ -16,31 +16,36 @@ class UsersController < ApplicationController
   end
 
   def update
+    # @user = User.find(params[:user_id])
+    # @score = @user.scores.find(params[:id])
+    # byebug
+    # if @score.save(add_trip)
+    #   flash[:notice] = "Score Added!"
     # distanceInKilometers
-    # emissions
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
-    redirect_to root_path
+    if xhr?
+      redirect_to root_path
+    else
+      redirect_back_or_to @score
+    end
 
   end
 
   def index
+  #  render json: Task.group_by_day(:completed_at).count
+
   end
 
   def show
-    # unless current_user
-    #   flash[:alert] = ["Must be logged in to view this account!"]
-    #   redirect_to root_path
-    #   return
-    # end
+    unless current_user
+      flash[:alert] = ["You must be logged in first!"]
+      redirect_to root_path
+    end
     @user = User.find(params[:id])
 
     @user_average = user_ave
 
-  end
-
-  def user_params
-    {email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation]}
   end
 
 
@@ -52,12 +57,14 @@ class UsersController < ApplicationController
     ave = sum / @user.scores.all.length
   end
 
-# @user.scores[1].score
-#
-# user_score_arry = []
-#
-# @user.scores.each do
-#   user_score_arry.push(scores.score)
-# end
-# user_score_arry
+  private
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  def add_trip
+    distance_in_kilometers = params[:distanceInKilometers]
+    score_num = params[:scoreNum]
+    user_id = params[:user_id]
+  end
 end

@@ -19,6 +19,7 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
+    @scores = Score.find(params[:id])
   end
 
   def team_params
