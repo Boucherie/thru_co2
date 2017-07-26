@@ -29,27 +29,28 @@
         <div class="dis">
           Distance: <span id="distance"></span>
         </div>
+        <div class="types">
+          <form id="transit-types">
+            <select id="transit-options">
+              <option value="0.04885">Heavy Rail</option>
+              <option value="0.05363"= >LRT</option>
+              <option value="0.10172"= >Local Bus</option>
+              <option value="0.05789"= >Subway</option>
+            </select>
+          </form>
 
-        <form id="transit-types">
-          <select id="transit-options">
-            <option value="0.04885">Heavy Rail</option>
-            <option value="0.05363"= >LRT</option>
-            <option value="0.10172"= >Local Bus</option>
-            <option value="0.05789"= >Subway</option>
-          </select>
-        </form>
-
-        <form id="vehicle-types">
-          <select id="vehicle-options">
-            <option value="0.23606">Car (Gasoline)</option>
-            <option value="0.27361"= >Car (Diesel)</option>
-            <option value="0.16459"= >Car (Hybrid)</option>
-            <option value="0.23514"= >4x4</option>
-            <option value="0.23691"= >Car (Sports Model)</option>
-            <option value="0.11978"= >Moped / Scooter</option>
-            <option value="0.12762"= >Motorcycle</option>
-          </select>
-        </form>
+          <form id="vehicle-types">
+            <select id="vehicle-options">
+              <option value="0.23606">Car (Gasoline)</option>
+              <option value="0.27361"= >Car (Diesel)</option>
+              <option value="0.16459"= >Car (Hybrid)</option>
+              <option value="0.23514"= >4x4</option>
+              <option value="0.23691"= >Car (Sports Model)</option>
+              <option value="0.11978"= >Moped / Scooter</option>
+              <option value="0.12762"= >Motorcycle</option>
+            </select>
+          </form>
+        </div>
 
           <p id="emissions-display-statement">Your CO2 emissions: </p>
           <p id="emissions-value"> --- </p>

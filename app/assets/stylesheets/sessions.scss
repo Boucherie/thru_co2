@@ -6,7 +6,7 @@
   color: #173d4e;
   background-color: #e4edec;
   width: 400px;
-  height: 200px;
+  height: 230px;
   padding-top: 20px;
   margin-top: 0px;
   margin-bottom: 585px;
@@ -63,65 +63,31 @@
   font-weight: 800;
 }
 
-#user {
+
+.smallscreen
+{
   display: none;
 }
-
-@media screen and (max-width: 991px){
+@media screen and (max-width: 900px){
     .usercontainer {
-      overflow: hidden;
-      background-color: inherit;
-    }
-    .field {
       display: none;
     }
-    #userlogin {
-      display: none;
-    }
-    #user,
-    #newuser,
-    #guestuser {
+    .smallscreen{
       display: block;
-      height: 50px;
+    }
+    #login,
+    #new,
+    #guest {
+      font-size: 17px;
+      font-weight: 500;
+      height: 40px;
       width: 130px;
       color: #cfcfcf;
       background-color: #2d6e8c;
-      position: absolute;
-      right: 2px;
-      top: 2px;
-      display: flex;
       border-style: none;
       border-radius: 0;
       text-decoration: underline;
+      margin-top: 4px;
     }
-    #newuser {
-      right: 0px;
-      top: 45px;
-    }
-    #guestuser {
-      right: 0px;
-      top: 88px;
-    }
-    #user:hover {
-      background-color: darkblue;
-    }
-    #newuser:hover {
-      background-color: darkblue;
-    }
-    #guestuser:hover {
-      background-color: darkblue;
-    }
-    .usercontainer .show {
-      visibility: visible;
-      -webkit-animation: fadeIn ls;
-      animation: fadeIn ls;
-    }
-    @-webkit-keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
+
 }

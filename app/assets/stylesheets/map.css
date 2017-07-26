@@ -4,13 +4,12 @@
 
 #map {
   margin: auto;
-
-  height: 75%;
-  border-radius: 20px;
-  width: 70%;
-  /*height: 500px;
-  width: 800px;*/
+  /*height: 500px;*/
+  /*width: 800px;*/
+  height: 600px;
+  width: 1100px;
   border: 1px solid transparent;
+  border-radius: 4px;
   box-shadow: 3px 3px 3px 3px #999;
 }
 
@@ -18,9 +17,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background :
-  url('/assets/5-watercolor-map-of-the-world-map-michael-tompsett.jpg') no-repeat;
-  background-position: top center;
   }
 
 .controls {
@@ -35,9 +31,7 @@ html, body {
 }
 
 #origin-input,
-#destination-input,
-#emissions-display-box,
-#score-display-box {
+#destination-input {
   background-color: #fff;
   font-family: Roboto;
   font-size: 15px;
@@ -73,7 +67,6 @@ html, body {
 
 #transit-types,
 #vehicle-types {
-  padding: 0.5em;
   visibility: hidden;
 }
 
@@ -81,11 +74,14 @@ html, body {
 #score-display-box {
   display: block;
   width: 33%;
-  padding: 2em;
-  opacity: 0.7;
-  border: dotted black;
+  height: 280px;
+  padding: 15px;
+  opacity: 0.9;
+  margin-top: 15px;
+  border: 3px dotted black;
   border-width: 10px 5px;
-  border-radius: 20px 60px;
+  border-radius: 50px 60px;
+  background-color: white;
 }
 #emissions-display-box {
   float: left;
@@ -95,27 +91,66 @@ html, body {
 #score-display-box {
   float: right;
   text-align: center;
-  padding: 2em;
-  height: 100%;
   margin-right: 15%;
+}
 
+#emissions-value {
+  text-align: center;
 }
 
 #score-value {
-  padding: 1em;
+  padding: 15px;
+}
 
-.dis {
-  color: #532207;
+.dis,
+#score-display-statement,
+#emissions-display-statement {
+  color: #154a5f;
   text-align: center;
-  font-family: Roboto;
   font-size: 30px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+#distance,
+#emissions-value,
+#score-value {
+  color: #c90606;
+  font-size: 22px;
   font-weight: 500;
 }
 
-#distance {
-  font-family: Roboto;
-  font-size: 30px;
-  font-weight: 700;
-  color: #135c8a;
+#transit-types,
+#transit-options,
+#vehicle-types,
+#vehicle-options {
+  width: 150px;
+  color: #154a5f;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+#transit-types {
+  margin-left: 100px;
+  float: left;
+}
+#vehicle-types {
+  margin-right: 80px;
+  float: right;
+}
+
+#submit-score {
+  font-size: 18px;
+  color: white;
+  background-color: #154a5f;
+  opacity: 0.8;
+  width: auto;
+  height: 40px;
+  border: 1px solid inherit;
+  border-radius: 8px;
+}
+
+#submit-score:hover {
+  opacity: 1;
 }
