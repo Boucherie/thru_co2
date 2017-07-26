@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
     if xhr?
-      redirect_to root_path
+      redirect_to users_path
     else
       redirect_back_or_to @score
     end
@@ -45,6 +45,10 @@ class UsersController < ApplicationController
   end
 
   def index
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7e0b65f944d91ab444a1191e327451f8325e1ab8
 
 
   end
