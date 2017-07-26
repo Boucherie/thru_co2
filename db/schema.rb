@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725142915) do
+ActiveRecord::Schema.define(version: 20170725212855) do
 
   create_table "scores", force: :cascade do |t|
     t.integer "score"
     t.integer "distanceInKilometers"
     t.string "date", limit: 8
     t.integer "user_id"
+    t.datetime "created_at"
     t.index ["user_id"], name: "index_scores_on_user_id"
-    
   end
 
   create_table "teams", force: :cascade do |t|

@@ -29,5 +29,9 @@
       <input type="button" id="newsignup" value="Create Account" onclick="window.location = '<%= calculators_path %>';">
       <!-- <%= f.submit "Create Account" %> -->
     </p>
+    <p>
+      <%= link_to('Log In', '/sessions/new') %>
+      <%= link_to('Guest User', '/calculators') %>
+    </p>
   <% end %>
 </div>

@@ -1,11 +1,10 @@
-<!-- MERGED THIS CODE FOR MAIN SCREEN LOOK... THIS FILE DOESN'T IN USE ANY MORE -->
+<!-- COPIED THIS CODE FOR MAIN SCREEN LOOK... THIS FILE DOESN'T IN USE ANY MORE -->
 
 
 
-<!-- <%= form_tag sessions_path do %>
+<%= form_tag sessions_path do %>
 <div class="usercontainer">
-  <h1>Log In</h1>
-
+  <br>
   <div class="field">
     <%= label_tag :email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <%= text_field_tag :email, params[:email] %>
@@ -15,10 +14,7 @@
     <%= password_field_tag :password %>
   </div>
   <br>
-  <input type="button" id="userlogin" value="Log In" onclick="window.location = '<%= calculators_path %>';">
-  <div class="userlinks">
-    <input type="button" id="newuser" value="Register" onclick="window.location = '<%= users_new_path %>';">
-    <input type="button" id="guestuser" value="Guest User" onclick="window.location = '<%= calculators_path %>';">
+  <input type="submit" id="userlogin" value="Log In">
   </div>
 </div>
-<% end %> -->
+<% end %>
