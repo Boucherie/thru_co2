@@ -21,8 +21,6 @@ resources :sessions
 
   delete 'sessions' => 'sessions#destroy'
 
-# resources :charts do
-#   get 'score'
-#   
+  
 
 end
