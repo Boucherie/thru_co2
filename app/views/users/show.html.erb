@@ -3,9 +3,9 @@
 <h2><%= @user.name %></h2>
 <h2>Team: <%= @user.team.name %></h2>
 <h2>Average Score: <%= @user_average %></h2>
-
-<%= area_chart Score.group_by_day(:created_at).count, id:"users-chart", width: "400px", height: "100px", max: 100, xtitle: "Time/Date", ytitle: "Score (%)", colors: ["#595fed"] %>
-
+  <div class="graph">
+    <%= area_chart Score.group_by_day(:created_at).count, id:"users-chart", width: "400px", height: "100px", max: 100, xtitle: "Time/Date", ytitle: "Score (%)", colors: ["#595fed"] %>
+  </div>
 
 <ul>
   <% @user.scores.each do |score| %>
