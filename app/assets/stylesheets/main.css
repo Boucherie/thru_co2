@@ -42,3 +42,8 @@ h4 {
   bottom: 0;
   width: 100%;
 }
+
+.error {
+  border: 1px solid red;
+  border-radius: 4px;
+}

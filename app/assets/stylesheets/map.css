@@ -60,7 +60,7 @@ html, body {
   font-weight: 300;
 }
 
-#emissions-display-box {
+/*#emissions-display-box {
     overflow: auto;
     display: block;
 }
@@ -68,18 +68,6 @@ html, body {
 #transit-types,
 #vehicle-types {
   visibility: hidden;
-}
-
-.graph {
-  display: block;
-  padding: 15px;
-  opacity: 0.8;
-  margin: 0 auto;
-  border: 3px dotted black;
-  border-width: 10px 5px;
-  border-radius: 50px 60px;
-  background-color: white;
-
 }
 
 #emissions-display-box,
@@ -123,6 +111,7 @@ html, body {
   font-size: 30px;
   font-weight: 600;
   margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 #distance,
@@ -140,17 +129,17 @@ html, body {
   width: 150px;
   color: #154a5f;
   font-size: 16px;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-left: 50px;
 }
 
 #transit-types {
-  margin-left: 50px;
-  float: left;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
+
 #vehicle-types {
-  margin-right: 30px;
-  float: right;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 #submit-score {
@@ -166,4 +155,4 @@ html, body {
 
 #submit-score:hover {
   opacity: 1;
-}
+}*/
