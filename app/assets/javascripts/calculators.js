@@ -146,8 +146,27 @@ function calculateEmissions(distanceInput, transit) {
   getEmissionsDiv.innerText = emissionsToDisplay + " kgCO2e";
   var getScoreDiv = document.getElementById("score-value");
   getScoreDiv.innerText = scoreToDisplay + "%";
+
   var userForm = document.getElementById("user-form");
   userForm.setAttribute('method', "POST")
+  userForm.setAttribute('action', 'users/update');
+
+  var distanceSet = document.createElement('input');
+  distanceSet.setAttribute('type', 'hidden');
+  distanceSet.setAttribute('value', 'distanceInKilometers');
+  userForm.append(distanceSet);
+
+  var emissionsSet =
+  document.createElement('input');
+  emissionsSet.setAttribute('type', 'hidden');
+  emissionsSet.setAttribute('value', 'yourEmissions');
+  userForm.append(emissionsSet);
+
+  var scoreSetscoreSet
+  var document.createElement('input');
+  scoreSet.setAttribute('type', 'hidden');
+  scoreSet.setAttribute('value', 'distanceInKilometers');
+  userForm.append(scoreSet);
 
   userForm.on('submit', function(e){
     e.preventDefault();
