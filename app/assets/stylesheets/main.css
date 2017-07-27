@@ -30,6 +30,21 @@ body {
   height: auto;
 }
 
+#introduction {
+  text-align: center;
+  background-color: #2e6a86;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  margin: 0px;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  border: 2px solid darkblue;
+  border-radius: 40px 2px;
+}
+
 h4 {
   text-align: center;
   background-color: #935d00;
