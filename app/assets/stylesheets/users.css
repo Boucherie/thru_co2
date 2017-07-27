@@ -1,0 +1,36 @@
+
+.showcontainer {
+  color: #e4edec;
+  background-color: #1b408f;
+  width: auto;
+  height: 850px;
+  padding-top: 5px;
+  padding-left: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  /*position: relative;
+  left: 730px;*/
+}
+
+.graph {
+  display: block;
+  padding: 15px;
+  opacity: 1;
+  margin: 0 auto;
+  border: 3px double darkred;
+  border-width: 10px 5px;
+  border-radius: 50px 60px;
+  background-color: white;
+}
+h1 {
+  color: #ec7474;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+h2,
+ul {
+  color: lightblue;
+  font-size: 18px;
+}

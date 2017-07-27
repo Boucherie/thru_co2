@@ -15,18 +15,19 @@
     <h1 class="hello">Welcome To Thru CO2</h1>
     <%= form_tag sessions_path do %>
     <div class="usercontainer">
-      <div class="field">
+
+      <div class="field" placeholder="email">
         <%= label_tag :email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <%= text_field_tag :email, params[:email] %>
       </div>
-      <div class="field">
+      <div class="field" placeholder="password">
         <%= label_tag :password %>
         <%= password_field_tag :password %>
       </div>
       <br>
       <div class="userlinks">
-
-        <input type="button" id="userlogin" value="Log In" onclick="window.location = '<%= calculators_path %>';">
+        <!-- <%= submit_tag "Log In" %> -->
+        <input type="submit" id="userlogin" value="Log In">
       <br>
         <input type="button" id="newuser" value="Register" onclick="window.location = '<%= users_new_path %>';">
 
