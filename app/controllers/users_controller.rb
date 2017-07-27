@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
     if xhr?
-      redirect_to users_path
+      redirect_to users_url(@user)
     else
       redirect_back_or_to @score
     end
