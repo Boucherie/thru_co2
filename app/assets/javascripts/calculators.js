@@ -20,12 +20,16 @@ function calculateEmissions(distanceInput, transit) {
   var getScoreDiv = document.getElementById("score-value");
   getScoreDiv.innerText = scoreToDisplay + "%";
   var submitScore = document.getElementById("submit-score");
-  submitScore.addEventListener('submit', function(){
+  var userId = document.getElementById("user_id_calculator");
+  var valueId = userId.value;
+
+  submitScore.addEventListener('click', function(){
+    console.log('post sent!');
     $.ajax({
       url: '/users/update',
       method: "POST",
       data: {"distanceInKilometers":distanceInKilometers, "emissionsNum":emissionsNum,
-        "scoreNum":scoreNum, "user_id":user_id},
+        "scoreNum":scoreNum, "user_id":valueId},
       dataType: 'json'
     }).done(function(response){
       console.log(response + 'data sent!');
