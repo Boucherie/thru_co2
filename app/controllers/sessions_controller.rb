@@ -6,16 +6,16 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to users_show_url, notice: "Logged In!"
+      redirect_to calculators_path
     else
-      flash.now[:alert] = ["Login failed, email and/or password are incorrect!"]
-      render :new
+      # flash.now[:alert] = ["Login failed, email and/or password are incorrect!"]
+      # render :template => "users/index"
     end
   end
 
 
   def destroy
     session[:user_id] = nil
-    redirect_to users_show_url, notice: "Logged Out!"
+    redirect_to users_show_url
   end
 end

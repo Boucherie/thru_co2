@@ -17,11 +17,11 @@ class UsersController < ApplicationController
 
   def show
     unless current_user
-      flash[:alert] = ["You must be logged in first!"]
+      # flash[:alert] = "You must be logged in first!"
       redirect_to root_path
       return
     end
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id])
 
     @user_average = user_ave
 

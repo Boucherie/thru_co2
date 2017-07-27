@@ -6,7 +6,7 @@
   margin: auto;
   /*height: 500px;*/
   /*width: 800px;*/
-  height: 600px;
+  height: 550px;
   width: 1100px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -51,7 +51,7 @@ html, body {
   color: #fff;
   background-color: #4d90fe;
   margin-left: 15px;
-  padding: 5px 11px 0px 11px;
+  padding: 0px 11px 0px 11px;
 }
 
 #mode-selector label {
@@ -61,7 +61,7 @@ html, body {
 }
 
 #emissions-display-box {
-    overflow: hidden;
+    overflow: auto;
     display: block;
 }
 
@@ -85,16 +85,17 @@ html, body {
 #emissions-display-box,
 #score-display-box {
   display: block;
-  width: 33%;
+  width: 34%;
   height: 280px;
   padding: 15px;
   opacity: 0.9;
-  margin-top: 15px;
+  margin-top: 10px;
   border: 3px dotted black;
   border-width: 10px 5px;
   border-radius: 50px 60px;
   background-color: white;
 }
+
 #emissions-display-box {
   float: left;
   margin-left: 15%;
@@ -139,16 +140,16 @@ html, body {
   width: 150px;
   color: #154a5f;
   font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 
 #transit-types {
-  margin-left: 100px;
+  margin-left: 50px;
   float: left;
 }
 #vehicle-types {
-  margin-right: 80px;
+  margin-right: 30px;
   float: right;
 }
 
