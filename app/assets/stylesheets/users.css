@@ -24,7 +24,7 @@
   background-color: white;
 }
 h1 {
-  color: #ec7474;
+  color: lightblue;
   font-size: 35px;
   font-weight: 700;
 }
@@ -34,3 +34,72 @@ ul {
   color: lightblue;
   font-size: 18px;
 }
+
+.signupcontainer {
+  text-align: center;
+  color: #e4edec;
+  background-color: #270947;
+  width: 550px;
+  height: auto;
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  position: absolute;
+  top: 160px;
+  right: 650px;
+  border: 2px solid black;
+  border-radius: 50px 60px;
+}
+
+.signupcontainer:hover {
+  opacity: 1;
+}
+
+hr {
+  font-weight: 800;
+}
+
+.signupfields {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#user_email,
+#user_password,
+#user_password_confirmation {
+  font-size: 15px;
+}
+
+#newsignup {
+  font-size: 17px;
+  color: #2d6e8c;
+  border: 2px solid;
+  padding: 3px;
+  border-radius: 5px;
+  width: 180px;
+  height: 35px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+#newsignup:hover {
+  color: #cfcfcf;
+  background-color: #2d6e8c;
+}
+
+a {
+    color: blue;
+}
+
+li {
+  color: red;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1200px){
+    .signupcontainer {
+      position: relative;
+      left: 200px;
+    }

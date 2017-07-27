@@ -34,8 +34,6 @@
         <input type="button" id="guestuser" value="Guest User" onclick="window.location = '<%= calculators_path %>';">
       </div>
     </div>
-
-
     <% end %>
     <center>
       <div class="smallscreen">
@@ -43,12 +41,12 @@
         <input type="button" value="Register" id="new" onclick="window.location = '<%= users_new_path %>';">
         <input type="button" value="Guest User" id="guest" onclick="window.location = '<%= calculators_path %>';">
       </div>
-  </center>
-  <div class="intro">
-  <h3>ThruCO2 lets you map a travel route, and calculates CO2 emissions of how you chose to get there.</h3>
-  <p> Do you drive to work, or take the subway? The app scores users on their travel choices, tracking commuting habits over time individually, or as a team. </p>
-  </div>
+    </center>
     <footer>
+      <div id="introduction">
+        <h3>ThruCO2 lets you map a travel route, and calculates CO2 emissions of how you chose to get there.</h3>
+        <p> Do you drive to work, or take the subway? The app scores users on their travel choices, tracking commuting habits over time individually, or as a team. </p>
+      </div>
       <h4>&copy; Bitmaker 2017</h4>
     </footer>
   </body>
