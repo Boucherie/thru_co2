@@ -8,11 +8,11 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to calculators_path
     else
-      # flash.now[:alert] = ["Login failed, email and/or password are incorrect!"]
-      # render :template => "users/index"
+      flash.now[:alert] = "Login failed, email and/or password are incorrect!"
+      render :template => "users/index"
+      # redirect_to root_path
     end
   end
-
 
   def destroy
     session[:user_id] = nil

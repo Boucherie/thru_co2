@@ -28,8 +28,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    # @user = User.find(params[:user_id])
-    # @score = @user.scores.find(params[:id])
+    @user = User.find(params[:user_id])
+    @score = @user.scores.find(params[:id])
+    @score.save(add_trip)
+    # byebug
     # if @score.save(add_trip)
     #   flash[:notice] = "Score Added!"
     # end
@@ -59,7 +61,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require[:user].permit[:email, :password, :password_confirmation]
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   def add_trip
