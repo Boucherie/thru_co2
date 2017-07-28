@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
+
     if (newsignup){
     newsignup.addEventListener('click', function (event) {
       var newemail = document.querySelector('#user_email');
