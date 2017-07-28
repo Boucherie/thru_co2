@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var newsignup = document.querySelector('#newsignup');
 
+    if (userLogin) {
+      userLogin.addEventListener('click',function () {
+        userContainer.style.display = 'block';
+        userLogin.style.display = 'none';
+        newUser.style.display = 'none';
+        guestUser.style.display = 'none';
+      });
+    }
+
+
     newsignup.addEventListener('click', function (event) {
       var newemail = document.querySelector('#user_email');
       var newpassword = document.querySelector('#user_password');
@@ -31,30 +41,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    user.addEventListener('click',function (event) {
-      var email = document.querySelector('#email');
-      var password = document.querySelector('#password');
+    if (user) {
+      user.addEventListener('click',function (event) {
+        var email = document.querySelector('#email');
+        var password = document.querySelector('#password');
 
-      if (email.value === ""){
-        event.preventDefault();
-        email.placeholder = "Enter valid email";
-        email.className = email.className + " error ";
-        // email.style.border = "1px solid red";
-        // email.style.borderRadius = "4px";
-      }
-      if (password.value === ""){
-        event.preventDefault();
-        password.placeholder = "Enter valid password";
-        password.className = password.className + " error ";
-        // password.style.border = "1px solid red";
-        // password.style.borderRadius = "4px";
-      }
-    });
-
-    userLogin.addEventListener('click',function () {
-      userContainer.style.display = 'block';
-      userLogin.style.display = 'none';
-      newUser.style.display = 'none';
-      guestUser.style.display = 'none';
-    });
+        if (email.value === ""){
+          event.preventDefault();
+          email.placeholder = "Enter valid email";
+          email.className = email.className + " error ";
+          // email.style.border = "1px solid red";
+          // email.style.borderRadius = "4px";
+        }
+        if (password.value === ""){
+          event.preventDefault();
+          password.placeholder = "Enter valid password";
+          password.className = password.className + " error ";
+          // password.style.border = "1px solid red";
+          // password.style.borderRadius = "4px";
+        }
+      });
+    }
 });
