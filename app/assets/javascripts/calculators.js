@@ -162,7 +162,7 @@ function calculateEmissions(distanceInput, transit) {
   scoreSet.value = scoreSet;
 
 
-  userForm.addClickListener('submit', function(e){
+  userForm.addEventListener('submit', function(e){
     e.preventDefault();
     var currentUser = $(this).children('input[type=hidden]').val();
     console.log( $( this  ).serialize() );
