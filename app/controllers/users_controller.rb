@@ -51,11 +51,12 @@ class UsersController < ApplicationController
   end
 
   def user_ave
-    sum = 0
-    @user.scores.all.each do |score|
-      sum += score[:score]
-    end
-    ave = sum / @user.scores.all.length
+      sum = 0
+      @user.scores.all.each do |score|
+        sum += score[:score]
+      end
+      ave = (@user.scores.all.length == 0) ? 0 : sum / @user.scores.all.length
+      # ave = sum / @user.scores.all.length
   end
 
   def addToTeam
