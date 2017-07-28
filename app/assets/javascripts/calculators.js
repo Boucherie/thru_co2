@@ -148,8 +148,8 @@ function calculateEmissions(distanceInput, transit) {
   getScoreDiv.innerText = scoreToDisplay + "%";
 
   var userForm = document.getElementById("user-form");
-  userForm.setAttribute('method', "POST")
-  userForm.setAttribute('action', 'users/update');
+  // userForm.setAttribute('method', "POST")
+  // userForm.setAttribute('action', 'users/update');
 
 // CHANGE value
   var distanceSet = document.getElementById('distance-set');
