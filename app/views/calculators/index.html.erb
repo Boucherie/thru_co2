@@ -1,46 +1,38 @@
-
-  <div id="link">Signed In as: <%= current_user.email %>! <%= link_to 'My Account', users_show_url %> | <%= link_to 'Logout', sessions_path("current"), :method => :delete %></div>
-
 <% if current_user %>
   <div id="link">Signed In as: <%= current_user.email %>! <%= link_to 'My Account', users_show_url %> | <%= link_to 'Logout', sessions_path("current"), :method => :delete %></div>
 <% end %>
 
-
-
-
-  <hr>
-    <input id="origin-input" class="controls" type="text"
+<hr>
+  <input id="origin-input" class="controls" type="text"
         placeholder="Enter an origin location">
-
-    <input id="destination-input" class="controls" type="text"
+  <input id="destination-input" class="controls" type="text"
         placeholder="Enter a destination location">
 
-    <div id="mode-selector" class="controls">
-      <input type="radio" name="type" id="changemode-walking" checked="checked">
-      <label for="changemode-walking">Walking</label>
+  <div id="mode-selector" class="controls">
+    <input type="radio" name="type" id="changemode-walking" checked="checked">
+    <label for="changemode-walking">Walking</label>
 
-      <input type="radio" name="type" id="changemode-bicycling">
-      <label for="changemode-bicycling">Bicycling</label>
+    <input type="radio" name="type" id="changemode-bicycling">
+    <label for="changemode-bicycling">Bicycling</label>
 
-      <input type="radio" name="type" id="changemode-transit">
-      <label for="changemode-transit">Transit</label>
+    <input type="radio" name="type" id="changemode-transit">
+    <label for="changemode-transit">Transit</label>
 
-      <input type="radio" name="type" id="changemode-driving">
-      <label for="changemode-driving">Driving</label>
-    </div>
+    <input type="radio" name="type" id="changemode-driving">
+    <label for="changemode-driving">Driving</label>
+  </div>
 
-      <div id="map"></div>
-      <br>
-      <!-- <form id= "user-form"> -->
-        <input id="user_id_calculator" type="hidden" value="<%= @user_id %>" />
-        <div id="display-dashboard">
-
-
-          <div id="emissions-display-box">
+  <div id="map"></div>
+  <br>
+    <!-- <form id= "user-form"> -->
+    <input id="user_id_calculator" type="hidden" value="<%= @user_id %>" />
+      <div id="display-dashboard">
+        <div id="emissions-display-box">
           <div class="dis">
             Distance: <span id="distance"></span>
           </div>
           <div class="types">
+
             <form id="transit-types">
               <select id="transit-options">
                 <option value="0.05363" >LRT</option>
@@ -51,10 +43,9 @@
             </form>
 
             <script type="text/javascript">
-            var transitTypes = document.querySelector("#transit-types");
-            console.log(transitTypes);
+              var transitTypes = document.querySelector("#transit-types");
+              console.log(transitTypes);
             </script>
-
 
             <form id="vehicle-types">
               <select id="vehicle-options">
@@ -68,39 +59,40 @@
               </select>
             </form>
 
-              <input id="user_id_calculator" type="hidden" value="<%= @user_id %>"></input>
-            </div>
-              <br>
-              <p id="emissions-display-statement">Your CO2 emissions: </p>
-              <p id="emissions-value"> --- </p>
+            <input id="user_id_calculator" type="hidden" value="<%= @user_id %>"></input>
           </div>
-      <form id="user-form">
-      <div id="score-display-box">
+          <br>
+          <p id="emissions-display-statement">Your CO2 emissions: </p>
+          <p id="emissions-value"> --- </p>
+        </div>
 
-        <p id="score-display-statement">Your Score: </p>
-        <p id="score-value"> --- </p>
+        <form id="user-form">
+          <div id="score-display-box">
+            <p id="score-display-statement">Your Score: </p>
+            <p id="score-value"> --- </p>
 
-      <% if current_user %>
-        <button type="button" name="button" id="submit-score">Submit Your Route...</button>
-      <% else %>
-          <h3 id="guestsubmitnotice">You have to logged in to store your score..</h5>
-      <% end %>
-      </div>
-    </div>
+              <% if current_user %>
+                <button type="button" name="button" id="submit-score">Submit Your Route...</button>
+              <% else %>
+                <h3 id="guestsubmitnotice">You have to logged in to store your score..</h5>
+              <% end %>
+            </div>
+          </div>
 
           <div id="score-display-box">
             <p id="score-display-statement">Your Score: </p>
             <p id="score-value"> --- </p>
-            <button type="submit" name="button" id="submit-score">Submit Your Route...</button>
+              <button type="submit" name="button" id="submit-score">Submit Your Route...</button>
           </div>
         </form>
-      </div>
-      <div id="score-explanation">
-        <p>Scores are determined from emission factors as defined in DEFRA (Department for Business, Energy and Industrial Strategy) guidelines. </p>
-        <p>For this calculator, note that cycling was considered to be the baseline level in the scoring system, as it expended to least amount of energy. Emissions for walking and biking were assigned nominal factors to account for the fact that both tasks <em>do</em> expend some energy. Therefore, the combined reduction of energy expended and amount of personal risk taken on accounts for the scores observed in this calculator. </p>
-      </div>
-</body>
-
+      <footer>
+        <div id="score-explaination">
+          <p>Scores are determined from emission factors as defined in DEFRA (Department for Business, Energy and Industrial Strategy) guidelines. </p>
+          <p>For this calculator, note that cycling was considered to be the baseline level in the scoring system, as it expended to least amount of energy. Emissions for walking and biking were assigned nominal factors to account for the fact that both tasks <em>do</em> expend some energy. Therefore, the combined reduction of energy expended and amount of personal risk taken on accounts for the scores observed in this calculator. </p>
+        </div>
+      </footer>
+      
+    </body>
 </html>
 
 

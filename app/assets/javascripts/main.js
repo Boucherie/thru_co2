@@ -31,13 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    userLogin.addEventListener('click',function () {
-      userContainer.style.display = 'block';
-      userLogin.style.display = 'none';
-      newUser.style.display = 'none';
-      guestUser.style.display = 'none';
-    });
-
     user.addEventListener('click',function (event) {
       var email = document.querySelector('#email');
       var password = document.querySelector('#password');
@@ -58,4 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+    userLogin.addEventListener('click',function () {
+      userContainer.style.display = 'block';
+      userLogin.style.display = 'none';
+      newUser.style.display = 'none';
+      guestUser.style.display = 'none';
+    });
 });
