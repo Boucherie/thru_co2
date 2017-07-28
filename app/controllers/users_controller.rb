@@ -28,27 +28,18 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:user_id])
-    @score = @user.scores.find(params[:id])
-    @score.save(add_trip)
+    # @user = User.find(params[:user_id])
+    # @score = @user.scores.find(params[:id])
     # byebug
     # if @score.save(add_trip)
     #   flash[:notice] = "Score Added!"
-    # end
-    # byebug
     # distanceInKilometers
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
     if xhr?
-<<<<<<< HEAD
-      redirect_to users_url(@user)
+      redirect_to users_path
     else
       redirect_back_or_to @score
-=======
-      redirect_to users_path
-    # else
-    #   redirect_back_or_to @score
->>>>>>> 0dca9b8769edea0439be1c2ab4ab794c48d4ddbb
     end
 
   end
@@ -65,9 +56,14 @@ class UsersController < ApplicationController
     ave = sum / @user.scores.all.length
   end
 
+  def addToTeam
+    @user = User.where(params[:name])
+    @user.team_id = Team.find(params[:id])
+  end
+
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require[:user].permit[:email, :password, :password_confirmation]
   end
 
   def add_trip
