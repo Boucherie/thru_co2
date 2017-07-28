@@ -29,7 +29,6 @@ Team.create!(
 )
 
 User.create!(
-  name: 'Minion1',
   email: 'email1@minions.com',
   team_id: 1,
   id: 1,
@@ -38,7 +37,6 @@ User.create!(
 )
 puts "seeded"
 User.create!(
-  name: 'Minion2',
   email: 'email2@minions.com',
   team_id: 1,
   id: 2,
@@ -47,7 +45,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Minion3',
   email: 'email3@minions.com',
   team_id: 1,
   id: 3,
@@ -56,7 +53,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Droid1',
   email: 'email1@droids.com',
   team_id: 2,
   id: 4,
@@ -65,7 +61,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Droid2',
   email: 'email2@droids.com',
   team_id: 2,
   id: 5,
@@ -74,7 +69,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Droid3',
   email: 'email3@droids.com',
   team_id: 2,
   id: 6,
@@ -83,7 +77,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Dalek1',
   email: 'email1@daleks.com',
   team_id: 3,
   id: 7,
@@ -92,7 +85,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Dalek2',
   email: 'email2@daleks.com',
   team_id: 3,
   id: 8,
@@ -101,7 +93,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Dalek3',
   email: 'email3@daleks.com',
   team_id: 3,
   id: 9,
@@ -110,7 +101,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Person1',
   email: 'email1@normal.com',
   id: 10,
   password: 'password',
@@ -118,7 +108,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Person2',
   email: 'email2@normal.com',
   id: 11,
   password: 'password',
@@ -126,7 +115,6 @@ User.create!(
 )
 
 User.create!(
-  name: 'Person3',
   email: 'email3@normal.com',
   id: 12,
   password: 'password',

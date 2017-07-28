@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
     if xhr?
-      redirect_to users_url(@user)
+      redirect_to users_show_url(@user)
     else
       redirect_back_or_to @score
       redirect_to users_path
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require[:user].permit[:email, :password, :password_confirmation]
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   def add_trip
