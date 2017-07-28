@@ -47,7 +47,6 @@ class UsersController < ApplicationController
     # else
     #   redirect_back_or_to @score
     end
-
   end
 
   def index
