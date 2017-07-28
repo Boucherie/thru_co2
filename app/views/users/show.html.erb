@@ -3,15 +3,15 @@
 
 <div class="showcontainer">
   <h1>My Account</h1>
-  <h2>Team: <%= @user.team.name %></h2>
-  <h2>Average Score: <%= @user_average %></h2>
+  <h2>Team: <%#- @user.team.name -#%></h2>
+  <h2>Average Score: <%#- @user_average -#%>%</h2>
   <div class="graph">
     <%= line_chart Score.group_by_day(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
   </div>
   <ul>
     <% @user.scores.each do |score| %>
-      <li>Trip Date: <%= score[:date] %><br>
-          Distance: <%= score[:distance] %> km<br>
+      <li>Trip Date: <%= score[:created_at] %><br>
+          Distance: <%= score[:distanceInKilometers] %> km<br>
           Trip Score: <%= score[:score] %>%
       </li>
       <br>
