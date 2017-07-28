@@ -151,6 +151,8 @@ function calculateEmissions(distanceInput, transit) {
   userForm.setAttribute('method', "POST")
   userForm.setAttribute('action', 'users/update');
 
+  
+
   var distanceSet = document.createElement('input');
   distanceSet.setAttribute('type', 'hidden');
   distanceSet.setAttribute('value', 'distanceInKilometers');
@@ -162,16 +164,15 @@ function calculateEmissions(distanceInput, transit) {
   emissionsSet.setAttribute('value', 'yourEmissions');
   userForm.append(emissionsSet);
 
-  var scoreSetscoreSet
-  var document.createElement('input');
+  var scoreSetscoreSet =
+  document.createElement('input');
   scoreSet.setAttribute('type', 'hidden');
   scoreSet.setAttribute('value', 'distanceInKilometers');
   userForm.append(scoreSet);
 
-  userForm.on('submit', function(e){
+  userForm.addEventListener('submit', function(e){
     e.preventDefault();
     var currentUser = $(this).children('input[type=hidden]').val();
-    var saveCalc = console.log( $( this ).serialize() );
     console.log( $( this  ).serialize() );
     $.ajax({
       url: '/users/update' + currentUser,
