@@ -136,215 +136,215 @@ User.create!(
 Score.create!(
   user_id: 1,
   distanceInKilometers: 15,
-  date: '011918',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 1,
   distanceInKilometers: 15,
-  date: '011918',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 1,
   distanceInKilometers: 15,
-  date: '012018',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 2,
   distanceInKilometers: 15,
-  date: '011818',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 2,
   distanceInKilometers: 15,
-  date: '011918',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 2,
   distanceInKilometers: 15,
-  date: '012018',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 3,
   distanceInKilometers: 15,
-  date: '011818',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 3,
   distanceInKilometers: 15,
-  date: '011918',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 3,
   distanceInKilometers: 15,
-  date: '011918',
   # transit_mode: 'car',
-  score: 20
+  score: 20,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 4,
   distanceInKilometers: 50,
-  date: '010118',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 4,
   distanceInKilometers: 50,
-  date: '010218',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 4,
   distanceInKilometers: 50,
-  date: '010218',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 5,
   distanceInKilometers: 50,
-  date: '010118',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 5,
   distanceInKilometers: 50,
-  date: '010218',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 5,
   distanceInKilometers: 50,
-  date: '010318',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 6,
   distanceInKilometers: 50,
-  date: '010118',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 6,
   distanceInKilometers: 50,
-  date: '010218',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 6,
   distanceInKilometers: 50,
-  date: '010318',
   # transit_mode: 'subway',
-  score: 45
+  score: 45,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 7,
   distanceInKilometers: 60,
-  date: '010118',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 7,
   distanceInKilometers: 60,
-  date: '010218',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 7,
   distanceInKilometers: 60,
-  date: '010318',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 8,
   distanceInKilometers: 60,
-  date: '010118',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 8,
   distanceInKilometers: 60,
-  date: '010218',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 8,
   distanceInKilometers: 60,
-  date: '010318',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
   user_id: 9,
   distanceInKilometers: 60,
-  date: '010118',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-01 12:05'
 )
 
 Score.create!(
   user_id: 9,
   distanceInKilometers: 60,
-  date: '010218',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
   user_id: 9,
   distanceInKilometers: 60,
-  date: '010318',
   # transit_mode: 'walk',
-  score: 70
+  score: 70,
+  created_at: '2017-07-03 12:05'
 )
