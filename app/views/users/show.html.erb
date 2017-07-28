@@ -7,7 +7,7 @@
   <h2>Team: <%= @user.team.name %></h2>
   <h2>Average Score: <%= @user_average %></h2>
   <div class="graph">
-    <%= area_chart Score.group_by_hour(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
+    <%= area_chart Score.group_by_period(params[:period], :created_at, permit: %w[day week]).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
   </div>
   <ul>
     <% @user.scores.each do |score| %>
@@ -19,3 +19,21 @@
     <% end %>
   </ul>
 </div>
+
+
+<!-- backup data (add to graph as backup option)
+data: [{
+        x: Fri, 28 July 2017,
+        y: 24
+    }, {
+        x: Sat, 29 July 2017,
+        y: 32
+
+    }, {
+        x: Sun, 30 July 2017,
+        y: 19
+
+    }, {
+        x: Mon, 31 July 2017,
+        y: 64
+    }] -->

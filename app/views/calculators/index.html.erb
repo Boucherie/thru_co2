@@ -66,9 +66,7 @@
                 <option value="0.11978">Moped / Scooter</option>
                 <option value="0.12762">Motorcycle</option>
               </select>
-            </form>
 
-              <input id="user_id_calculator" type="hidden" value="<%= @user_id %>"></input>
             </div>
               <br>
               <p id="emissions-display-statement">Your CO2 emissions: </p>
@@ -88,6 +86,11 @@
       </div>
     </div>
 
+        <form id="user-form">
+          <input id="user_id_calculator" type="hidden" value="<%= @user_id %>"></input>
+          <input id="distance-set" type="hidden" name="" value="">
+          <input id="emissions-set" type="hidden" value="">
+          <input id="score-set" type="hidden" value="">
           <div id="score-display-box">
             <p id="score-display-statement">Your Score: </p>
             <p id="score-value"> --- </p>
