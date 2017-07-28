@@ -1,11 +1,15 @@
-<h1>Teams!</h1>
+<div class="teamcontainer">
+  <h1 id="team" cla>Team Score!</h1>
+  <hr>
+  <ul>
+    <br>
+    <% @teams.each do |team|%>
+      <li>
+          <p>Name: <%= team.name %></p>
+          <p>Score: <%= team.team_score %></p>
+          <br>
+      </li>
 
-<ul>
-  <% @teams.each do |team|%>
-    <li>
-        <p><%= team.name %></p>
-        <p><%= team.team_score %></p>
-    </li>
-
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+</div>

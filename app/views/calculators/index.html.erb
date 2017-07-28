@@ -66,6 +66,15 @@
           <p id="emissions-value"> --- </p>
         </div>
 
+        <div id="score-explaination">
+          <br>
+          <h2>Scores are determined from emission factors as defined in DEFRA (Department for Business, Energy and Industrial Strategy) guidelines. </h2>
+          <br>
+          <hr>
+          <br>
+          <p>For this calculator, note that cycling was considered to be the baseline level in the scoring system, as it expended to least amount of energy. Emissions for walking and biking were assigned nominal factors to account for the fact that both tasks <em>do</em> expend some energy. Therefore, the combined reduction of energy expended and amount of personal risk taken on accounts for the scores observed in this calculator. </p>
+        </div>
+
         <form id="user-form">
           <div id="score-display-box">
             <p id="score-display-statement">Your Score: </p>
@@ -74,27 +83,11 @@
               <% if current_user %>
                 <button type="button" name="button" id="submit-score">Submit Your Route...</button>
               <% else %>
-                <h3 id="guestsubmitnotice">You have to logged in to store your score..</h5>
+                <h3 id="guestsubmitnotice">You have to be logged in to store your score..</h5>
               <% end %>
             </div>
           </div>
-
-          <div id="score-display-box">
-            <p id="score-display-statement">Your Score: </p>
-            <p id="score-value"> --- </p>
-              <button type="submit" name="button" id="submit-score">Submit Your Route...</button>
-          </div>
         </form>
-      <footer>
-        <div id="score-explaination">
-          <p>Scores are determined from emission factors as defined in DEFRA (Department for Business, Energy and Industrial Strategy) guidelines. </p>
-          <p>For this calculator, note that cycling was considered to be the baseline level in the scoring system, as it expended to least amount of energy. Emissions for walking and biking were assigned nominal factors to account for the fact that both tasks <em>do</em> expend some energy. Therefore, the combined reduction of energy expended and amount of personal risk taken on accounts for the scores observed in this calculator. </p>
-        </div>
-      </footer>
-      
-    </body>
-</html>
-
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGFD00-tY6V7DneSkOBCJL_gDVrL0H2rU&libraries=places&callback=initMap"
           async defer></script>
