@@ -109,6 +109,30 @@ User.create!(
   password_confirmation: 'password'
 )
 
+User.create!(
+  name: 'Person1',
+  email: 'email1@normal.com',
+  id: 10,
+  password: 'password',
+  password_confirmation: 'password'
+)
+
+User.create!(
+  name: 'Person2',
+  email: 'email2@normal.com',
+  id: 11,
+  password: 'password',
+  password_confirmation: 'password'
+)
+
+User.create!(
+  name: 'Person3',
+  email: 'email3@normal.com',
+  id: 12,
+  password: 'password',
+  password_confirmation: 'password'
+)
+
 Score.create!(
   user_id: 1,
   distanceInKilometers: 15,
