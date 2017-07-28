@@ -31,7 +31,8 @@ html, body {
 }
 
 #origin-input,
-#destination-input {
+#destination-input,
+#score-explanation {
   background-color: #fff;
   font-family: Roboto;
   font-size: 15px;
