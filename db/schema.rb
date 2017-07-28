@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728155114) do
+ActiveRecord::Schema.define(version: 20170728164246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,8 +18,9 @@ ActiveRecord::Schema.define(version: 20170728155114) do
   create_table "scores", force: :cascade do |t|
     t.integer "score"
     t.integer "distanceInKilometers"
-    t.integer "date"
     t.bigint "user_id"
+    t.datetime "created_at"
+    t.datetime "upated_at"
     t.index ["user_id"], name: "index_scores_on_user_id"
   end
 
