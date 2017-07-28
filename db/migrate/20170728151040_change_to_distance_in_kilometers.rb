@@ -1,4 +1,4 @@
-class ChangeDistanceToDistanceKilometers < ActiveRecord::Migration[5.1]
+class ChangeToDistanceInKilometers < ActiveRecord::Migration[5.1]
   def change
     rename_column :scores, :distance, :distanceInKilometers
   end
