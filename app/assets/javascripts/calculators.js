@@ -148,27 +148,19 @@ function calculateEmissions(distanceInput, transit) {
   getScoreDiv.innerText = scoreToDisplay + "%";
 
   var userForm = document.getElementById("user-form");
-  userForm.setAttribute('method', "POST")
-  userForm.setAttribute('action', 'users/update');
+  // userForm.setAttribute('method', "POST")
+  // userForm.setAttribute('action', 'users/update');
 
-  
+// CHANGE value
+  var distanceSet = document.getElementById('distance-set');
+  distanceSet.value = distanceInKilometers;
 
-  var distanceSet = document.createElement('input');
-  distanceSet.setAttribute('type', 'hidden');
-  distanceSet.setAttribute('value', 'distanceInKilometers');
-  userForm.append(distanceSet);
+  var emissionsSet = document.getElementById('emissions-set');
+  emissionsSet.value = yourEmissions;
 
-  var emissionsSet =
-  document.createElement('input');
-  emissionsSet.setAttribute('type', 'hidden');
-  emissionsSet.setAttribute('value', 'yourEmissions');
-  userForm.append(emissionsSet);
+  var scoreSet = document.getElementById('score-set');
+  scoreSet.value = scoreSet;
 
-  var scoreSetscoreSet =
-  document.createElement('input');
-  scoreSet.setAttribute('type', 'hidden');
-  scoreSet.setAttribute('value', 'distanceInKilometers');
-  userForm.append(scoreSet);
 
   userForm.addEventListener('submit', function(e){
     e.preventDefault();
@@ -177,7 +169,6 @@ function calculateEmissions(distanceInput, transit) {
     $.ajax({
       url: '/users/update' + currentUser,
       method: "POST",
-      data: saveCalc,
       dataType: 'json'
     }).done(function(response){
       console.log(response + 'data sent!');
