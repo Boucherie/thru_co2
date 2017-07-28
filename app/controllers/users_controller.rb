@@ -37,7 +37,8 @@ class UsersController < ApplicationController
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
     if xhr?
-      redirect_to users_show_url(@user)
+      session[:user_id] = @user.id
+      redirect_to users_show_url
     else
       redirect_back_or_to @score
       redirect_to users_path
