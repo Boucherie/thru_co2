@@ -59,7 +59,6 @@ class UsersController < ApplicationController
   end
 
   def addToTeam
-
     @user.team_id = Team.find(params[:id])
   end
 
