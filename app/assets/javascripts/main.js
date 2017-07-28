@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
 
+    if (newsignup){
     newsignup.addEventListener('click', function (event) {
       var newemail = document.querySelector('#user_email');
       var newpassword = document.querySelector('#user_password');
@@ -61,4 +62,5 @@ document.addEventListener('DOMContentLoaded', function () {
         newpasswordconfirm.className = newpasswordconfirm.className + " error ";
       }
     });
+  };
 });
