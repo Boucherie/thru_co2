@@ -31,8 +31,7 @@ html, body {
 }
 
 #origin-input,
-#destination-input,
-#score-explanation {
+#destination-input {
   background-color: #fff;
   font-family: Roboto;
   font-size: 15px;
@@ -59,6 +58,19 @@ html, body {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
+}
+
+#score-explaination {
+  text-align: center;
+  background-color: #935d00;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0px;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /*#emissions-display-box {
