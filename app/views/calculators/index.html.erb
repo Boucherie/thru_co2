@@ -25,7 +25,7 @@
   <div id="map"></div>
   <br>
     <!-- <form id= "user-form"> -->
-    <input id="user_id_calculator" type="hidden" value="<%= @user_id %>" />
+
       <div id="display-dashboard">
         <div id="emissions-display-box">
           <div class="dis">
@@ -59,19 +59,24 @@
               </select>
             </form>
 
-            <input id="user_id_calculator" type="hidden" value="<%= @user_id %>"></input>
+
           </div>
           <br>
             <p id="emissions-display-statement">Your CO2 emissions: </p>
             <p id="emissions-value"> --- </p>
           </div>
-        <form id="user-form">
+
           <div id="score-display-box">
             <p id="score-display-statement">Your Score: </p>
             <p id="score-value"> --- </p>
 
               <% if current_user %>
-                <button type="button" name="button" id="submit-score">Submit Your Route...</button>
+              <form id="user-form">
+                <input id="user_id_calculator" type="hidden" value="<%= @user_id %>" />
+                <input id="distance-set" type="hidden" name="" value="">
+                <input id="emissions-set" type="hidden" value="">
+                <input id="score-set" type="hidden" value="">
+                <input type="submit" name="button" id="submit-score"</input>
               <% else %>
                 <h3 id="guestsubmitnotice">You have to be logged in to store your score..</h5>
               <% end %>

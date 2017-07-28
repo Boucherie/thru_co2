@@ -125,8 +125,16 @@ Score.create!(
   user_id: 1,
   distanceInKilometers: 15,
   # transit_mode: 'car',
-  score: 20,
+  score: 49,
   created_at: '2017-07-01 12:05'
+)
+
+Score.create!(
+  user_id: 1,
+  distanceInKilometers: 20,
+  # transit_mode: 'car',
+  score: 32,
+  created_at: '2017-07-02 13:05'
 )
 
 Score.create!(
@@ -134,8 +142,58 @@ Score.create!(
   distanceInKilometers: 15,
   # transit_mode: 'car',
   score: 20,
+  created_at: '2017-07-03 12:05'
+)
+
+Score.create!(
+  user_id: 1,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 32,
+  created_at: '2017-07-04 12:05'
+)
+
+Score.create!(
+  user_id: 1,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 10,
+  created_at: '2017-07-05 9:05'
+)
+
+Score.create!(
+  user_id: 1,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 15,
+  created_at: '2017-07-06 11:05'
+)
+
+Score.create!(
+  user_id: 2,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 49,
+  created_at: '2017-07-01 12:05'
+)
+
+Score.create!(
+  user_id: 2,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 34,
   created_at: '2017-07-02 12:05'
 )
+
+Score.create!(
+  user_id: 2,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 64,
+  created_at: '2017-07-03 12:05'
+)
+
+
 
 Score.create!(
   user_id: 1,
@@ -146,11 +204,43 @@ Score.create!(
 )
 
 Score.create!(
+  user_id: 1,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 24,
+  created_at: '2017-07-04 12:05'
+)
+
+Score.create!(
+  user_id: 1,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 10,
+  created_at: '2017-07-05 9:05'
+)
+
+Score.create!(
   user_id: 2,
   distanceInKilometers: 15,
   # transit_mode: 'car',
-  score: 20,
-  created_at: '2017-07-01 12:05'
+  score: 15,
+  created_at: '2017-07-01 11:05'
+  )
+
+Score.create!(
+  user_id: 2,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 49,
+  created_at: '2017-07-02 12:05'
+  )
+
+Score.create!(
+  user_id: 2,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 49,
+  created_at: '2017-07-03 12:05'
 )
 
 Score.create!(
@@ -158,14 +248,38 @@ Score.create!(
   distanceInKilometers: 15,
   # transit_mode: 'car',
   score: 20,
+  created_at: '2017-07-04 12:05'
+)
+
+Score.create!(
+  user_id: 2,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 20,
+  created_at: '2017-07-05 12:05'
+)
+
+Score.create!(
+  user_id: 3,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 36,
+  created_at: '2017-07-01 11:05'
+)
+
+Score.create!(
+  user_id: 3,
+  distanceInKilometers: 15,
+  # transit_mode: 'car',
+  score: 49,
   created_at: '2017-07-02 12:05'
 )
 
 Score.create!(
-  user_id: 2,
+  user_id: 3,
   distanceInKilometers: 15,
   # transit_mode: 'car',
-  score: 20,
+  score: 32,
   created_at: '2017-07-03 12:05'
 )
 
@@ -173,32 +287,16 @@ Score.create!(
   user_id: 3,
   distanceInKilometers: 15,
   # transit_mode: 'car',
-  score: 20,
-  created_at: '2017-07-01 12:05'
+  score: 100,
+  created_at: '2017-07-04 12:05'
 )
 
 Score.create!(
   user_id: 3,
   distanceInKilometers: 15,
   # transit_mode: 'car',
-  score: 20,
-  created_at: '2017-07-02 12:05'
-)
-
-Score.create!(
-  user_id: 3,
-  distanceInKilometers: 15,
-  # transit_mode: 'car',
-  score: 20,
-  created_at: '2017-07-03 12:05'
-)
-
-Score.create!(
-  user_id: 4,
-  distanceInKilometers: 50,
-  # transit_mode: 'subway',
-  score: 45,
-  created_at: '2017-07-01 12:05'
+  score: 64,
+  created_at: '2017-07-05 12:05'
 )
 
 Score.create!(
@@ -207,6 +305,14 @@ Score.create!(
   # transit_mode: 'subway',
   score: 45,
   created_at: '2017-07-02 12:05'
+)
+
+Score.create!(
+  user_id: 4,
+  distanceInKilometers: 50,
+  # transit_mode: 'subway',
+  score: 45,
+  created_at: '2017-07-04 12:05'
 )
 
 Score.create!(
