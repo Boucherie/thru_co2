@@ -114,7 +114,7 @@ User.create!(
   password_confirmation: 'password'
 )
 
-User.create!(push
+User.create!(
   email: 'email3@normal.com',
   id: 12,
   password: 'password',
