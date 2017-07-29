@@ -149,10 +149,11 @@ function calculateEmissions(distanceInput, transit) {
   getScoreDiv.innerText = scoreToDisplay + "%";
 
   var userForm = document.getElementById("user-form");
-  // userForm.setAttribute('method', "POST")
-  // userForm.setAttribute('action', 'users/update');
+
 
 // CHANGE value
+  var getUser = document.getElementById('user_id_calculator');
+  
   var distanceSet = document.getElementById('distance-set');
   distanceSet.value = distanceInKilometers;
 
@@ -168,8 +169,9 @@ function calculateEmissions(distanceInput, transit) {
     var currentUser = $(this).children('input[type=hidden]').val();
     console.log( $( this  ).serialize() );
     $.ajax({
-      url: '/users/update' + currentUser,
+      url: '/users/update',
       method: "POST",
+      data: currentUser,
       dataType: 'json'
     }).done(function(response){
       console.log(response + 'data sent!');
@@ -177,7 +179,6 @@ function calculateEmissions(distanceInput, transit) {
       console.log('data failed to send.');
     });
   });
-
 };
 
 
