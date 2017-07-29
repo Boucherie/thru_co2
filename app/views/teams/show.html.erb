@@ -1,6 +1,6 @@
 <h1><%= @team.name %></h1>
 
-<h2>Average Score: <%@team_average %>%</h2>
+<h2>Average Score: <%=@team_average %>%</h2>
 
 <div class="graph">
   <%= line_chart Score.group_by_day(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
