@@ -13,6 +13,7 @@ function initMap() {
       bikeLayer.setMap(map);
 }
 
+
  /**
   * @constructor
  */
