@@ -1,26 +1,16 @@
 <h1><%= @team.name %></h1>
 
-<!-- find team members where user.team_id = team_id -->
+<h2>Average Score: <%@team_average %>%</h2>
 
 <div class="graph">
-  <%= line_chart Score.group_by_hour(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
+  <%= line_chart Score.group_by_day(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
 </div>
 
 <ul>
   <% Score.all.each do |score| %>
     <% if score.user.team_id == @team.id %>
-        <li><%= score.user.name %> | <%= score.score %>%</li>
+        <li><%= score.user.email %> | <%= score.score %>%</li>
     <% end %>
   <% end %>
 
 </ul>
-
-<!-- <%= form_for(@user) do |f|%>
-<p>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</p>
-<p>
-  <%= f.submit "Add to team!" %>
-</p>
-<% end %> -->

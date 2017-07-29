@@ -57,7 +57,6 @@ class UsersController < ApplicationController
         sum += score[:score]
       end
       ave = (@user.scores.all.length == 0) ? 0 : sum / @user.scores.all.length
-      # ave = sum / @user.scores.all.length
   end
 
   def addToTeam
