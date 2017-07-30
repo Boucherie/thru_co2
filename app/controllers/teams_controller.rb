@@ -1,7 +1,6 @@
 class TeamsController < ApplicationController
   def index
     @teams = Team.all.order(name: :asc)
-    @team_average = team_ave
   end
 
   def new
@@ -39,17 +38,8 @@ class TeamsController < ApplicationController
         sum += score[:score]
       end
       ave = (@team.scores.all.length == 0) ? 0 : sum / @team.scores.all.length
-      ave
+      @team.team_score = ave
 
   end
-    # sum = 0
-    # count = 0
-    # Score.all.each do |score|
-    #   if score.user.team_id == @team.id
-    #     count ++
-    #     sum += score[:score]
-    #   end
-    # end
-    # # ave = sum/count
-    # ave = (sum == 0) ? 0 : sum / count
+
 end

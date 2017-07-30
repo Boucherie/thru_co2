@@ -13,19 +13,19 @@ Score.destroy_all
 Team.create!(
   name: 'Minions',
   id: 1,
-  team_score: 30
+  team_score: 36
 )
 
 Team.create!(
   name: 'Droids',
   id: 2,
-  team_score: 75
+  team_score: 45
 )
 
 Team.create!(
   name: 'Daleks',
   id: 3,
-  team_score: 80
+  team_score: 70
 )
 
 User.create!(
