@@ -1,0 +1,664 @@
+/* line 5, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#link {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  opacity: 1;
+  background-color: white;
+}
+
+/* line 16, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#emissions-display-box {
+  overflow: auto;
+  display: block;
+}
+
+/* line 21, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#transit-types,
+#vehicle-types {
+  visibility: hidden;
+}
+
+/* line 26, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#emissions-display-box,
+#score-display-box {
+  display: block;
+  width: 34%;
+  height: 280px;
+  padding: 15px;
+  opacity: 0.9;
+  margin-top: 7px;
+  border: 3px dotted black;
+  border-width: 10px 5px;
+  border-radius: 50px 60px;
+  background-color: white;
+}
+
+/* line 40, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#emissions-display-box {
+  float: left;
+  margin-left: 15%;
+}
+
+/* line 45, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#score-display-box {
+  float: right;
+  text-align: center;
+  margin-right: 15%;
+}
+
+/* line 51, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#emissions-value {
+  text-align: center;
+}
+
+/* line 55, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#score-value {
+  padding: 15px;
+}
+
+/* line 59, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+.dis,
+#score-display-statement,
+#emissions-display-statement {
+  color: #154a5f;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+/* line 70, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#distance,
+#emissions-value,
+#score-value {
+  color: #c90606;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* line 78, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#transit-types,
+#transit-options,
+#vehicle-types,
+#vehicle-options {
+  width: 150px;
+  color: #154a5f;
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+/* line 88, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#transit-types {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+/* line 93, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#vehicle-types {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+/* line 98, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#submit-score {
+  font-size: 18px;
+  color: white;
+  background-color: #154a5f;
+  opacity: 0.8;
+  width: auto;
+  height: 40px;
+  border: 1px solid inherit;
+  border-radius: 8px;
+}
+
+/* line 109, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#submit-score:hover {
+  opacity: 1;
+}
+
+/* line 113, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/calculator.scss */
+#guestsubmitnotice {
+  color: #c90606;
+}
+* {
+    font-family: Roboto;
+    /*overflow: auto;*/
+}
+html {
+  margin: 0px;
+}
+
+body {
+  background :
+  url('/assets/5-watercolor-map-of-the-world-map-michael-tompsett.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.hello {
+  font-size: 40px;
+  color: white;
+  background-color: #2e6a86;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: 800;
+  margin: 0px;
+  padding: 15px;
+  width: auto;
+  height: auto;
+}
+
+#introduction {
+  text-align: center;
+  background-color: #2e6a86;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  margin: 0px;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  border: 2px solid darkblue;
+  border-radius: 40px 2px;
+}
+
+h4 {
+  text-align: center;
+  background-color: #935d00;
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+  margin: 0px;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.error {
+  border: 1px solid red;
+  border-radius: 4px;
+}
+* {
+  box-sizing: border-box;
+}
+
+#map {
+  margin: auto;
+  /*height: 500px;*/
+  /*width: 800px;*/
+  height: 550px;
+  width: 1100px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px 3px #999;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  }
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin-input,
+#destination-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 15px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#origin-input:focus,
+#destination-input:focus {
+  border-color: #4d90fe;
+}
+
+#mode-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  margin-left: 15px;
+  padding: 0px 11px 0px 11px;
+}
+
+#mode-selector label {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#score-explaination {
+  /*text-align: center;*/
+  background-color: #632006;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0px;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  top: 17px;
+  height: 100%;
+  width: 10%;
+  line-height: 1.5;
+  overflow:auto;
+}
+
+/*#emissions-display-box {
+    overflow: auto;
+    display: block;
+}
+
+#transit-types,
+#vehicle-types {
+  visibility: hidden;
+}
+
+#emissions-display-box,
+#score-display-box {
+  display: block;
+  width: 34%;
+  height: 280px;
+  padding: 15px;
+  opacity: 0.9;
+  margin-top: 10px;
+  border: 3px dotted black;
+  border-width: 10px 5px;
+  border-radius: 50px 60px;
+  background-color: white;
+}
+
+#emissions-display-box {
+  float: left;
+  margin-left: 15%;
+}
+
+#score-display-box {
+  float: right;
+  text-align: center;
+  margin-right: 15%;
+}
+
+#emissions-value {
+  text-align: center;
+}
+
+#score-value {
+  padding: 15px;
+}
+
+.dis,
+#score-display-statement,
+#emissions-display-statement {
+  color: #154a5f;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#distance,
+#emissions-value,
+#score-value {
+  color: #c90606;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#transit-types,
+#transit-options,
+#vehicle-types,
+#vehicle-options {
+  width: 150px;
+  color: #154a5f;
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+#transit-types {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#vehicle-types {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#submit-score {
+  font-size: 18px;
+  color: white;
+  background-color: #154a5f;
+  opacity: 0.8;
+  width: auto;
+  height: 40px;
+  border: 1px solid inherit;
+  border-radius: 8px;
+}
+
+#submit-score:hover {
+  opacity: 1;
+}*/
+/* line 4, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+.usercontainer {
+  text-align: center;
+  color: #173d4e;
+  background-color: #e4edec;
+  width: 400px;
+  height: 230px;
+  padding-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 585px;
+  position: absolute;
+  right: 0;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* line 20, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+.usercontainer:hover {
+  opacity: 1;
+}
+
+/* line 23, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+.field {
+  padding: 2px;
+  line-height: 2;
+}
+
+/* line 28, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+#userlogin,
+#user {
+  font-size: 17px;
+  color: #2d6e8c;
+  border: 2px solid;
+  padding: 3px;
+  margin-: 2px;
+  border-radius: 5px;
+  width: 90px;
+  height: 35px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 800;
+  display: inline-grid;
+}
+
+/* line 44, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+#user
+#userlogin:hover {
+  color: #cfcfcf;
+  background-color: #2d6e8c;
+}
+
+/* line 50, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+#newuser,
+#guestuser {
+  font-size: 17px;
+  color: #cfcfcf;
+  border: 2px solid inherit;
+  margin: 2px;
+  padding: 3px;
+  border-radius: 5px;
+  width: 130px;
+  height: 35px;
+  background-color: #2d6e8c;
+  margin-bottom: 35px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* line 67, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+.smallscreen {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  /* line 72, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+  .usercontainer {
+    display: none;
+  }
+
+  /* line 75, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+  .smallscreen {
+    display: block;
+  }
+
+  /* line 78, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/sessions.scss */
+  #login,
+  #new,
+  #guest {
+    font-size: 17px;
+    font-weight: 500;
+    height: 40px;
+    width: 130px;
+    color: #cfcfcf;
+    background-color: #2d6e8c;
+    border-style: none;
+    border-radius: 0;
+    text-decoration: underline;
+    margin-top: 4px;
+  }
+}
+/* line 4, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/teams.scss */
+.teamcontainer {
+  color: #e4edec;
+  background-color: #032703;
+  width: 400px;
+  height: auto;
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  position: absolute;
+  top: 160px;
+  right: 650px;
+  border: 2px solid black;
+  border-radius: 50px 60px;
+}
+
+/* line 20, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/teams.scss */
+#team,
+#createteamtitle {
+  text-align: center;
+}
+
+/* line 25, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/teams.scss */
+.createteamcontainer {
+  text-align: center;
+  color: #e4edec;
+  background-color: #032703;
+  width: 400px;
+  height: auto;
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  position: absolute;
+  top: 160px;
+  right: 650px;
+  border: 2px solid black;
+  border-radius: 50px 60px;
+}
+
+/* line 42, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/teams.scss */
+#newteam {
+  font-size: 17px;
+  color: #2d6e8c;
+  border: 2px solid;
+  padding: 3px;
+  border-radius: 5px;
+  width: 180px;
+  height: 35px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* line 55, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/teams.scss */
+#newteam:hover {
+  color: #cfcfcf;
+  background-color: #2d6e8c;
+}
+
+/* line 60, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/teams.scss */
+.teamfield {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 66, /Users/emilyboucher/Desktop/Bitmaker/final_project/thru_co2/app/assets/stylesheets/teams.scss */
+  .teamcontainer,
+  .createteamcontainer {
+    position: relative;
+    left: 200px;
+  }
+}
+
+.showcontainer {
+  color: #e4edec;
+  background-color: #1b408f;
+  width: auto;
+  height: 850px;
+  padding-top: 5px;
+  padding-left: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  /*position: relative;
+  left: 730px;*/
+}
+
+.graph {
+  display: block;
+  padding: 15px;
+  opacity: 1;
+  margin: 0 auto;
+  border: 3px double darkred;
+  border-width: 10px 5px;
+  border-radius: 50px 60px;
+  background-color: white;
+}
+h1 {
+  color: lightblue;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+h2,
+ul {
+  color: lightblue;
+  font-size: 18px;
+}
+
+.signupcontainer {
+  text-align: center;
+  color: #e4edec;
+  background-color: #270947;
+  width: 550px;
+  height: auto;
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  position: absolute;
+  top: 160px;
+  right: 650px;
+  border: 2px solid black;
+  border-radius: 50px 60px;
+}
+
+.signupcontainer:hover {
+  opacity: 1;
+}
+
+hr {
+  font-weight: 800;
+}
+
+.signupfields {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#user_email,
+#user_password,
+#user_password_confirmation {
+  font-size: 15px;
+}
+
+#newsignup {
+  font-size: 17px;
+  color: #2d6e8c;
+  border: 2px solid;
+  padding: 3px;
+  border-radius: 5px;
+  width: 180px;
+  height: 35px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+#newsignup:hover {
+  color: #cfcfcf;
+  background-color: #2d6e8c;
+}
+
+a {
+    color: blue;
+}
+
+li {
+  color: lightblue;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1200px){
+    .signupcontainer {
+      position: relative;
+      left: 200px;
+    }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

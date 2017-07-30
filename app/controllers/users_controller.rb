@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def new
     @user = User.new
   end
@@ -36,12 +38,15 @@ class UsersController < ApplicationController
     # distanceInKilometers
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
-    if xhr?
+    @user = User.find(session[:user_id])
+    @score = add_trip
+    if request.xhr?
       session[:user_id] = @user.id
-      redirect_to users_show_url
+      redirect_to root_path
+      render json @score
     else
       redirect_back_or_to @score
-      redirect_to users_path
+      redirect_to root_path
     # else
     #   redirect_back_or_to @score
     end
@@ -66,6 +71,10 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  def score_params
+    params.require(:score).permit(:distanceSet, :emissionsSet, :scoreSet)
   end
 
   def add_trip
