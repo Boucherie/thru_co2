@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .teamcontainer {
-  color: #e4edec;
-  background-color: #032703;
+  color: darkblue;
+  background-color: lightblue;
   width: 400px;
   height: auto;
   padding-top: 5px;
@@ -13,8 +13,7 @@
   position: absolute;
   top: 160px;
   right: 650px;
-  border: 2px solid black;
-  border-radius: 50px 60px;
+  border: 2px solid darkblue;
 }
 
 #team,
@@ -24,8 +23,8 @@
 
 .createteamcontainer {
   text-align: center;
-  color: #e4edec;
-  background-color: #032703;
+  color: darkblue;
+  background-color: lightblue;
   width: 400px;
   height: auto;
   padding-top: 5px;
@@ -35,8 +34,7 @@
   position: absolute;
   top: 160px;
   right: 650px;
-  border: 2px solid black;
-  border-radius: 50px 60px;
+  border: 2px solid darkblue;
 }
 
 #newteam {
@@ -62,7 +60,13 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 1200px){
+#teaminfo {
+  color: darkblue;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 880px){
     .teamcontainer,
     .createteamcontainer {
       position: relative;
