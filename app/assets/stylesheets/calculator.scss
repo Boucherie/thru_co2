@@ -97,20 +97,14 @@
 
 #submit-score {
   font-size: 18px;
-  color: white !important;
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
   padding: 0.5em;
-text-decoration: none !important;
-background-color: #154a5f;
+  text-decoration: none;
   opacity: 0.8;
-  height: 40px;
+  height: 65px;
   border: 1px solid inherit;
   border-radius: 8px;
-}
-
-#submit-score:hover {
-  opacity: 1;
 }
 
 #guestsubmitnotice {
