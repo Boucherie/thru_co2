@@ -3,7 +3,7 @@
 <!-- find team members where user.team_id = team_id -->
 
 <div class="graph">
-  <%= line_chart Score.group_by_hour(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
+  <%= line_chart Score.group_by_day(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
 </div>
 
 <ul>
