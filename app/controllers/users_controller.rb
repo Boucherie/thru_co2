@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    # @user = User.find_by[:email]
     # @user = User.find(params[:user_id])
     # @score = @user.scores.find(params[:id])
     # byebug
@@ -38,18 +39,18 @@ class UsersController < ApplicationController
     # distanceInKilometers
     # score
     # add data to strong params, pass user_id from view with AJAX (render on page or pass w params from JS)
-    @user = User.find(session[:user_id])
-    @score = add_trip
-    if request.xhr?
-      session[:user_id] = @user.id
-      redirect_to root_path
-      render json @score
-    else
-      redirect_back_or_to @score
-      redirect_to root_path
+    # @user = User.find(session[:user_id])
+    # @score = add_trip
+    # if request.xhr?
+    #   session[:user_id] = @user.id
+    #   redirect_to root_path
+    #   render json @score
     # else
     #   redirect_back_or_to @score
-    end
+    #   redirect_to root_path
+    # else
+    #   redirect_back_or_to @score
+    # end
   end
 
   def index
@@ -64,8 +65,10 @@ class UsersController < ApplicationController
       ave = (@user.scores.all.length == 0) ? 0 : sum / @user.scores.all.length
   end
 
-  def addToTeam
-    @user.team_id = Team.find(params[:id])
+  def self.addToTeam
+    @user = current_user
+    @team = Team.find(params[:id])
+    @user.update_attributes(team_id: params[:team_id])
   end
 
   private
@@ -73,13 +76,13 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
-  def score_params
-    params.require(:score).permit(:distanceSet, :emissionsSet, :scoreSet)
-  end
-
-  def add_trip
-    distance_in_kilometers = params[:distanceInKilometers]
-    score_num = params[:scoreNum]
-    user_id = params[:user_id]
-  end
+  # def score_params
+  #   params.require(:score).permit(:distanceSet, :emissionsSet, :scoreSet)
+  # end
+  #
+  # def add_trip
+  #   distance_in_kilometers = params[:distanceInKilometers]
+  #   score_num = params[:scoreNum]
+  #   user_id = params[:user_id]
+  # end
 end

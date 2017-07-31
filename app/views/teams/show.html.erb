@@ -14,3 +14,12 @@
   <% end %>
 
 </ul>
+
+<div class="">
+  <p>Join this team!:</p>
+  <% @user = current_user %>
+  <%= form_for (@user) do |f|%>
+    <%= f.hidden_field :team_id, @team.id %>
+    <%= f.submit_tag 'Add To Team' %>
+  <% end %>
+</div>
