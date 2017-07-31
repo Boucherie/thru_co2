@@ -194,7 +194,7 @@ Score.create!(
 )
 
 Score.create!(
-  user_id: 1,
+  user_id: 2,
   distanceInKilometers: 15,
   # transit_mode: 'car',
   score: 24,
@@ -202,7 +202,7 @@ Score.create!(
 )
 
 Score.create!(
-  user_id: 1,
+  user_id: 2,
   distanceInKilometers: 15,
   # transit_mode: 'car',
   score: 10,
