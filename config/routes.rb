@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get 'sessions/new' => 'sessions#new'
   delete 'sessions' => 'sessions#destroy'
 
+ resources :scores
 end

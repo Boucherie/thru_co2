@@ -75,11 +75,15 @@
               <div id="submit-score">
                 <%= link_to "Submit Your Route",  users_show_url %>
               </div>
-              <!-- <form method="post"  action= users/up"id="user-form">
-                <input id="user_id_calculator" type="hidden" value="<%= @user_id %>" />
-                <input id="distance-set" type="hidden" name="" value="" />
+              <!-- <%#- form_for ([@user, score]) do |f| -#%>
+              <%#- f.hidden_field(:post, :distanceInKilometers) -#%>
+              <%#- f.hidden_field(:post, :score) -#%> -->
+              <!-- <form method="post"  action= users/up"id=" user-form"> -->
+                <!-- <input id="user_id_calculator" type="hidden" value="<%= @user_id %>" /> -->
+                <!-- <input id="distance-set" type="hidden" name="" value="" />
                 <input id="emissions-set" type="hidden" value="" />
-                <input id="score-set" type="hidden" value="" />-->
+                <input id="score-set" type="hidden" value="" /> -->
+                <!-- <%#- end -#%> -->
                 <!-- <input type="submit" name="button" id="submit-score" /> -->
               <% else %>
                 <h3 id="guestsubmitnotice">You have to be logged in to store your score..</h5>
