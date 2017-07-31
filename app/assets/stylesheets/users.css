@@ -3,14 +3,19 @@
   color: #e4edec;
   background-color: #1b408f;
   width: auto;
-  height: 850px;
+  height: auto;
   padding-top: 5px;
   padding-left: 40px;
   font-size: 17px;
   font-weight: 500;
   opacity: 0.9;
-  /*position: relative;
-  left: 730px;*/
+}
+
+#myaccount {
+  text-align: center;
+  color: lightblue;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .graph {
@@ -24,21 +29,21 @@
   background-color: white;
 }
 h1 {
-  color: lightblue;
+  color: darkblue;
   font-size: 35px;
   font-weight: 700;
 }
 
 h2,
 ul {
-  color: lightblue;
+  color: #e4edec;
   font-size: 18px;
 }
 
 .signupcontainer {
   text-align: center;
-  color: #e4edec;
-  background-color: #270947;
+  color: darkblue;
+  background-color: lightblue;
   width: 550px;
   height: auto;
   padding-top: 5px;
@@ -48,8 +53,7 @@ ul {
   position: absolute;
   top: 160px;
   right: 650px;
-  border: 2px solid black;
-  border-radius: 50px 60px;
+  border: 2px solid darkblue;
 }
 
 .signupcontainer:hover {
@@ -98,7 +102,7 @@ li {
   font-weight: 600;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 880px){
     .signupcontainer {
       position: relative;
       left: 200px;

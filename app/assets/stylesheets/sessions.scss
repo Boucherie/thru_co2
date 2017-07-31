@@ -33,7 +33,7 @@
   padding: 3px;
   margin-: 2px;
   border-radius: 5px;
-  width: 90px;
+  width: 100px;
   height: 35px;
   margin-bottom: 15px;
   font-size: 16px;
@@ -68,7 +68,8 @@
 {
   display: none;
 }
-@media screen and (max-width: 900px){
+
+@media screen and (max-width: 880px){
     .usercontainer {
       display: none;
     }
