@@ -12,8 +12,6 @@ gem 'rails', '~> 5.1.2'
 # gem 'sqlite3'
 
 
-gem 'pg'
-
 # Use Puma as the app server
 gem 'pg'
 gem 'groupdate'

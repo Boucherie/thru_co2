@@ -71,6 +71,7 @@ html, body {
   height: 100%;
   width: 10%;
   line-height: 1.5;
+  overflow:auto;
 }
 
 @media screen and (max-width: 880px){

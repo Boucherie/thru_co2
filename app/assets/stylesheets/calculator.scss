@@ -97,10 +97,13 @@
 
 #submit-score {
   font-size: 18px;
-  color: white;
-  background-color: #154a5f;
+  color: white !important;
+  width: 40%;
+  margin: 0 auto;
+  padding: 0.5em;
+text-decoration: none !important;
+background-color: #154a5f;
   opacity: 0.8;
-  width: auto;
   height: 40px;
   border: 1px solid inherit;
   border-radius: 8px;

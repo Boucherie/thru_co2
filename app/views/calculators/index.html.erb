@@ -71,12 +71,16 @@
             <p id="score-value"> --- </p>
 
               <% if current_user %>
-              <form id="user-form">
+
+              <div id="submit-score">
+                <%= link_to "Submit Your Route",  users_show_url %>
+              </div>
+              <!-- <form method="post"  action= users/up"id="user-form">
                 <input id="user_id_calculator" type="hidden" value="<%= @user_id %>" />
-                <input id="distance-set" type="hidden" name="" value="">
-                <input id="emissions-set" type="hidden" value="">
-                <input id="score-set" type="hidden" value="">
-                <input type="submit" name="button" id="submit-score"</input>
+                <input id="distance-set" type="hidden" name="" value="" />
+                <input id="emissions-set" type="hidden" value="" />
+                <input id="score-set" type="hidden" value="" />-->
+                <!-- <input type="submit" name="button" id="submit-score" /> -->
               <% else %>
                 <h3 id="guestsubmitnotice">You have to be logged in to store your score..</h5>
               <% end %>
