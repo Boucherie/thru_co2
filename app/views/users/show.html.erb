@@ -8,7 +8,8 @@
   <h2>Team: <%= @user.team.name %></h2>
   <h2>Average Score: <%= @user_average %>%</h2>
   <div class="graph">
-    <%= line_chart Score.group_by_hour(:created_at).count, id:"users-chart", max: 100, xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
+
+    <%= bar_chart Score.pluck(:created_at, :score), id:"users-chart", xtitle: "Date/Time", ytitle: "Score (%)", colors: ["#595fed"] %>
   </div>
   <ul>
     <% @user.scores.each do |score| %>
