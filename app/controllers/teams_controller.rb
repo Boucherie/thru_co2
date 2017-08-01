@@ -17,18 +17,27 @@ class TeamsController < ApplicationController
     end
   end
 
+
   def show
     @team = Team.find(params[:id])
     @scores = Score.find(params[:id])
-  end
-
-  def addToTeam
-
-    @user.team_id = Team.find(params[:id])
+    @team_average = team_ave
+    @user = current_user
+    # User.addToTeam
   end
 
   def team_params
     {name: params[:team][:name]}
+  end
+
+  def team_ave
+      sum = 0
+      @team.scores.all.each do |score|
+        sum += score[:score]
+      end
+      ave = (@team.scores.all.length == 0) ? 0 : sum / @team.scores.all.length
+      @team.team_score = ave
+
   end
 
 
