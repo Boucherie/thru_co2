@@ -17,8 +17,9 @@
 
 <div class="">
   <p>Join this team!:</p>
-  <%= form_for (@user) do |f|%>
-    <%= f.hidden_field :team_id, @team.id %>
-    <%= f.submit_tag 'Add To Team' %>
+  <%#= form_tag ({:controller => :users, :action => :update, :team_id => @team.id, :method => :patch}) do %>
+  <%= form_for(current_user) do |f| %>
+    <%= f.hidden_field :team_id, value: params[:id] %>
+    <%= f.submit 'Join Team' %>
   <% end %>
 </div>

@@ -30,6 +30,13 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = current_user
+    if @user.update(user_params)
+      flash[:notice] = "Team Joined!"
+      redirect_to @user
+    else
+      redirect_back_or_to @user
+    end
     # @user = User.find_by[:email]
     # @user = User.find(params[:user_id])
     # @score = @user.scores.find(params[:id])
@@ -73,7 +80,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :team_id)
   end
 
   # def score_params
