@@ -13,8 +13,8 @@
   </div>
   <ul>
     <% @user.scores.each do |score| %>
-      <li>Trip Date: <%= score[:created_at] %><br>
-          Distance: <%= score[:distanceInKilometers] %> km<br>
+      <li>Trip Date: <%= score[:date] %><br>
+          Distance: <%= score[:distance] %> km<br>
           Trip Score: <%= score[:score] %>%
       </li>
       <br>
