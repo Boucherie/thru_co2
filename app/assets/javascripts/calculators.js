@@ -167,17 +167,17 @@ function calculateEmissions(distanceInput, transit) {
   userForm.addEventListener('click', function(e){
     e.preventDefault();
     var currentUser = $(this).children('input[type=hidden]').val();
-    console.log( $( this  ).serialize() );
-    // $.ajax({
-    //   url: '/users/update',
-    //   method: "POST",
-    //   data: currentUser,
-    //   dataType: 'json'
-    // }).done(function(response){
-    //   console.log(response + 'data sent!');
-    // }).fail(function(response){
-    //   console.log('data failed to send.');
-    // });
+    console.log( $( this ).serialize() );
+   $.ajax({
+      url: '/scores/create',
+      method: "POST",
+      data: currentUser,
+      dataType: 'json'
+    }).done(function(response){
+      console.log(response + 'data sent!');
+    }).fail(function(response){
+      console.log('data failed to send.');
+    });
   });
 };
 
