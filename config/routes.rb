@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users
   # resources :sessions
-  resources :calculators
+  resources :calculators, only: %i(index create)
   resources :teams, only: %i(new create index show)
   get 'teams/show' => 'teams#show'
 

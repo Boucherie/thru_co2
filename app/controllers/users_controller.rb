@@ -21,12 +21,13 @@ class UsersController < ApplicationController
     unless current_user
       # flash[:alert] = "You must be logged in first!"
       redirect_to root_path
+
       return
     end
     @user = User.find(session[:user_id])
 
     @user_average = user_ave
-
+    render :json
   end
 
   def update
