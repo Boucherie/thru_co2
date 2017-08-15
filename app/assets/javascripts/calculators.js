@@ -163,23 +163,23 @@ function calculateEmissions(distanceInput, transit) {
   var scoreSet = document.getElementById('score-set');
   scoreSet.value = scoreSet;
 
-
-  userForm.addEventListener('click', function(e){
-    e.preventDefault();
-    var currentUser = $(this).children('input[type=hidden]').val();
-    console.log( $( this ).serialize() );
-   $.ajax({
-      url: '/scores/create',
-      method: "POST",
-      data: currentUser,
-      dataType: 'json'
-    }).done(function(response){
-      console.log(response + 'data sent!');
-    }).fail(function(response){
-      console.log('data failed to send.');
-    });
-  });
-};
+// 
+//   userForm.addEventListener('click', function(e){
+//     e.preventDefault();
+//     var currentUser = $(this).children('input[type=hidden]').val();
+//     console.log( $( this ).serialize() );
+//    $.ajax({
+//       url: '/scores/create',
+//       method: "POST",
+//       data: currentUser,
+//       dataType: 'json'
+//     }).done(function(response){
+//       console.log(response + 'data sent!');
+//     }).fail(function(response){
+//       console.log('data failed to send.');
+//     });
+//   });
+// };
 
 
 function hideBothForms(){
