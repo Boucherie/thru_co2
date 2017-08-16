@@ -1,24 +1,9 @@
-# README
+# ThruCO2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ThruCO2 lets you map a travel route, and calculates CO2 emissions of how you chose to get there. The app is hosted at /pacific-fjord-26309.herokuapp.com/ .
 
-Things you may want to cover:
+Do you drive to work, or take the subway? The app scores users on their travel choices, tracking commuting habits over time individually, or as a team.
 
-* Ruby version
+(The app is currently undergoing updates, and some discrepancies have been found between local functionality and Heroku functionality.)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-PLEASE DON'T ADD ANY STYLE IN HTML/BODY/* ATTRIBUTE
+![carbon calculator landing page](app/assets/images/calcintro.png)
